@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Post No Bills Colombo Medium";
+  src: url("../fonts/post-no-bills-colombo.medium.ttf");
+}
+
+.augsejaisBaneris {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 84.28%;
+  background: #073590;
+}
+
+.virsraksts {
+  position: absolute;
+  left: 0%;
+  right: 71.74%;
+  top: 0%;
+  bottom: 0%;
+  margin-left: 20px;
+  font-family: Post No Bills Colombo Medium;
+  font-size: 96px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  user-select: none;
+}
+
+.apaksejaisBaneris {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 15.72%;
+  bottom: 0%;
+  background: rgba(186, 182, 182, 0.53);
+}
+
+#iziet {
+  position: absolute;
+  left: 89.86%;
+  right: 2.71%;
+  top: 35.4%;
+  bottom: 35.4%;
+  width: 142.59px;
+  height: 49.57px;
+  background: #ffffff;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: #073590;
+}
+
+.search {
+  position: absolute;
+  left: 9.8%;
+  right: 70.71%;
+  top: 2.77%;
+  bottom: 91.96%;
+  width: 374px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9d0e3;
+  box-sizing: border-box;
+  border-radius: 27px;
+  outline: none;
+  border: 1px solid transparent;
+  padding-left: 40px;
+  padding-right: 20px;
+  user-select: none;
+}
+
+.lupa {
+  position: absolute;
+  left: 5.88%;
+  right: 87.7%;
+  top: 25%;
+  bottom: 25%;
+  width: 24px;
+  height: 24px;
+  user-select: none;
+}
+
+.mekletReisu {
+  position: absolute;
+  left: 16.58%;
+  right: 5.88%;
+  top: 27%;
+  bottom: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: #000000;
+  width: 280px;
+  user-select: none;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.bilete {
+  position: absolute;
+  left: 9.69%;
+  right: 9.96%;
+  top: 12%;
+  bottom: 66.09%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.bildeLidmasina {
+  position: absolute;
+  left: 32.07%;
+  top: 29.75%;
+  width: 458.67px;
+  height: 43.24px;
+}
+
+#pogaLabot {
+  position: absolute;
+  left: 77.7%;
+  top: 67.72%;
+  background: #f1c933;
+  border-radius: 8px;
+  width: 151.92px;
+  height: 50.63px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: #073590;
+}
+
+#pogaDrukat {
+  width: 151.92px;
+  height: 50.63px;
+  position: absolute;
+  left: 88.94%;
+  top: 67.72%;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: #073590;
+}
+
+.tekstaNoformejums {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  display: flex;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+#datums {
+  left: 6.03%;
+  top: 29.32%;
+}
+
+#menesis {
+  left: 5.38%;
+  top: 47.92%;
+}
+
+#laiksNo {
+  left: 24.96%;
+  top: 26.32%;
+}
+
+#izlidoNo {
+  left: 24.96%;
+  top: 48.52%;
+}
+
+#laiksUz {
+  left: 65.6%;
+  top: 30.52%;
+}
+
+#izlidoUz {
+  left: 64.11%;
+  top: 47.92%;
+}
+
+#tReisaNumurs {
+  position: absolute;
+  top: 7.59%;
+  bottom: 81.01%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  color: #898181;
+  left: 2.42%;
+  right: 89.37%;
+}
+
+#reisaNumurs {
+  position: absolute;
+  top: 7.59%;
+  bottom: 81.01%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  color: #898181;
+  left: 10%;
+}
+
+#tRezervacijasNumurs {
+  position: absolute;
+  left: 77.7%;
+  top: 8.03%;
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  color: #000000;
+}
+
+#rezervacijasNumurs {
+  position: absolute;
+  left: 89%;
+  top: 8.03%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  color: #000000;
+}

@@ -1,0 +1,876 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Post No Bills Colombo Medium";
+  src: url("../fonts/post-no-bills-colombo.medium.ttf");
+}
+
+.augsejaisBaneris {
+  position: absolute;
+  left: -0.07%;
+  right: 0.07%;
+  top: 0%;
+  bottom: 84.28%;
+  background: #073590;
+}
+.virsraksts {
+  position: absolute;
+  left: 0%;
+  font-family: Post No Bills Colombo Medium;
+  font-size: 96px;
+  display: flex;
+  margin-left: 20px;
+  color: #ffffff;
+  user-select: none;
+}
+
+#iziet {
+  position: absolute;
+  width: 152px;
+  height: 50.63px;
+  left: 89.1%;
+  top: 35.4%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.apaksejaisBaneris {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 15.72%;
+  bottom: 0%;
+  background: rgba(186, 182, 182, 0.53);
+}
+
+.lidostas {
+  position: absolute;
+  left: 9.79%;
+  right: 9.86%;
+  top: 8.34%;
+  bottom: 73.35%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.nosaukumi {
+  position: absolute;
+  left: 0%;
+  right: 90.8%;
+  top: 0.15%;
+  bottom: 75.84%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+#pievienotLidostas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#pievienotLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#pievienotReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#labotLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 38.46%;
+  right: 42.96%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#labotReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 38.46%;
+  right: 42.96%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#labotLidostas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 38.46%;
+  right: 42.96%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#dzestLidostas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 61.45%;
+  right: 19.97%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#dzestLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 61.45%;
+  right: 19.97%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#dzestReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 61.45%;
+  right: 19.97%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#skatitStatistiku {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.lidmasinas {
+  position: absolute;
+  left: 9.72%;
+  right: 9.93%;
+  top: 28.85%;
+  bottom: 52.84%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.reisi {
+  position: absolute;
+  left: 9.93%;
+  right: 9.72%;
+  top: 49.36%;
+  bottom: 32.33%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.statistika {
+  position: absolute;
+  left: 9.79%;
+  right: 9.86%;
+  top: 69.87%;
+  bottom: 11.82%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+#apaksvirsraksti {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  color: #000000;
+  width: 300px;
+}
+
+#input {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 883px;
+  height: 40px;
+}
+
+#inputMazais {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 307px;
+  height: 40px;
+}
+
+.miniapaksa {
+  position: absolute;
+  left: 25.36%;
+  top: 21.94%;
+  width: 945px;
+  height: 559px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+#form {
+  position: absolute;
+  left: 25.36%;
+  top: 21.94%;
+  width: 945px;
+  height: 559px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.miniAugsa {
+  position: absolute;
+  width: 945px;
+  height: 77.89px;
+  left: 0x;
+  top: 0px;
+  background: #073590;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#miniVirsraksts {
+  position: absolute;
+  left: 2.01%;
+  top: 3.76%;
+  width: 134px;
+  height: 34px;
+  top: 14px;
+  left: 19px;
+  font-family: Post No Bills Colombo;
+  font-style: normal;
+  font-size: 36px;
+  display: flex;
+  color: #ffffff;
+}
+
+#popUp {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tPievienotLidostasNosaukums {
+  left: 3.28%;
+  top: 22%;
+}
+
+.tPievienotSaīsinājums {
+  left: 3.17%;
+  top: 40.97%;
+}
+
+.tPievienotAdrese {
+  left: 3.49%;
+  top: 58.32%;
+}
+
+.pievienotLidostasNosaukums {
+  left: 3.49%;
+  top: 28.98%;
+}
+
+.pievienotSaīsinājums {
+  left: 3.49%;
+  top: 46.33%;
+}
+
+.pievienotAdrese {
+  left: 3.49%;
+  top: 64.58%;
+}
+
+#pievienotLidostu {
+  position: absolute;
+  left: 80.63%;
+  top: 82.83%;
+  width: 154px;
+  height: 48px;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+#atcelt {
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #ababab;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.atcelt {
+  left: 62.12%;
+  top: 82.83%;
+}
+
+#popUp1 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.atceltLielakaDala {
+  left: 62.12%;
+  top: 89.45%;
+}
+
+.dzeltenaPoga {
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+#labotLidostuPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#dzestLidostuPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#pievienotLidmasinasPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#labotLidmasinasPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#dzestLidmasinasPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#pievienotReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#labotReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#dzestReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+.tLabotLidostasizvele {
+  left: 3.49%;
+  top: 18.25%;
+}
+
+.tLabotLidostasNosaukums {
+  left: 3.49%;
+  top: 37.21%;
+}
+
+.tLabotSaīsinājums {
+  left: 3.28%;
+  top: 55.99%;
+}
+
+.tLabotAdrese {
+  left: 3.49%;
+  top: 73.52%;
+}
+
+.labotLidostasizvele {
+  left: 3.28%;
+  top: 25.04%;
+}
+
+.labotLidostasNosaukums {
+  left: 3.49%;
+  top: 43.96%;
+}
+
+.labotSaīsinājums {
+  left: 3.49%;
+  top: 61.32%;
+}
+
+.labotAdrese {
+  left: 3.49%;
+  top: 79.56%;
+}
+
+#popUp2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tdzestlidostas {
+  left: 2.75%;
+  top: 21.65%;
+}
+
+.dzestlidostas {
+  left: 2.75%;
+  top: 29.34%;
+}
+
+#popUp3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tIzveletiesLidostu {
+  left: 3.28%;
+  top: 16.64%;
+}
+
+.tPievienotModeli {
+  left: 3.39%;
+  top: 33.45%;
+}
+
+.tPievienotRazosanasGads {
+  left: 3.39%;
+  top: 49.91%;
+}
+
+.tPievienotVietuSkaits {
+  left: 3.39%;
+  top: 68.34%;
+}
+
+.izveletiesLidostu {
+  left: 3.49%;
+  top: 21.65%;
+}
+
+.pievienotModeli {
+  left: 3.49%;
+  top: 38.46%;
+}
+
+.pievienotRazosanasGads {
+  left: 3.49%;
+  top: 55.81%;
+}
+
+.pievienotVietuSkaits {
+  left: 3.49%;
+  top: 74.06%;
+}
+
+#popUp4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tLabotLidmasinas {
+  left: 3.28%;
+  top: 16.64%;
+}
+
+.tLabotModeli {
+  left: 3.39%;
+  top: 33.45%;
+}
+
+.tLabotRazosanasGads {
+  left: 3.39%;
+  top: 49.91%;
+}
+
+.tLabotVietuSkaits {
+  left: 3.39%;
+  top: 68.34%;
+}
+
+.labotLidmasinas {
+  left: 3.49%;
+  top: 21.65%;
+}
+
+.labotModeli {
+  left: 3.49%;
+  top: 38.46%;
+}
+
+.labotRazosanasGads {
+  left: 3.49%;
+  top: 55.81%;
+}
+
+.labotVietuSkaits {
+  left: 3.49%;
+  top: 74.06%;
+}
+
+#popUp5 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tIzveletiesModeli {
+  left: 3.28%;
+  top: 32.02%;
+}
+
+.izveletiesModeli {
+  left: 3.39%;
+  top: 37.03%;
+}
+
+#popUp6 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tPievienotIzlidosanasDatumu {
+  left: 2.96%;
+  top: 25.76%;
+}
+
+.tPievienotLaiku {
+  left: 3.17%;
+  top: 44.36%;
+}
+
+.tPievienotNo {
+  left: 3.49%;
+  top: 61.72%;
+}
+
+.tPievienotUz {
+  left: 39.15%;
+  top: 61.72%;
+}
+
+.pievienotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 32.34%;
+}
+
+.pievienotLaiku {
+  left: 3.49%;
+  top: 49.69%;
+}
+
+.pievienotNo {
+  left: 3.49%;
+  top: 67.94%;
+}
+
+.pievienotUz {
+  left: 39.15%;
+  top: 67.44%;
+}
+
+#popUp7 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tIzveletiesReisaNumuru {
+  left: 3.39%;
+  top: 16.64%;
+}
+
+.tLabotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 35.06%;
+}
+
+.tLabotLaiku {
+  left: 3.28%;
+  top: 53.67%;
+}
+
+.tLabotNo {
+  left: 3.49%;
+  top: 71.02%;
+}
+
+.tLabotUz {
+  left: 39.15%;
+  top: 71.02%;
+}
+
+.izveletiesReisaNumuru {
+  left: 3.49%;
+  top: 22.72%;
+}
+
+.labotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 41.64%;
+}
+
+.labotLaiku {
+  left: 3.49%;
+  top: 58.99%;
+}
+
+.labotNo {
+  left: 3.49%;
+  top: 77.24%;
+}
+
+.labotUz {
+  left: 39.15%;
+  top: 77.24%;
+}
+
+#popUp8 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tDzestReisu {
+  left: 3.17%;
+  top: 21.47%;
+}
+
+.dzestReisu {
+  left: 3.49%;
+  top: 27.55%;
+}
+
+#popUp9 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#superMiniForm {
+  position: absolute;
+  left: 17.88%;
+  top: 17.71%;
+  width: 607px;
+  height: 361px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.superMiniAugsa {
+  position: absolute;
+  width: 607px;
+  height: 50, 3px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 86.07%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #073590;
+}
+
+#superMiniVirsraksts {
+  position: absolute;
+  left: 2.97%;
+  top: 15%;
+  width: 90px;
+  font-family: Post No Bills Colombo;
+  font-size: 24px;
+  display: flex;
+  color: #ffffff;
+}
+
+.tTiesam {
+  position: absolute;
+  left: 24.71%;
+  right: 24.55%;
+  top: 46.26%;
+  bottom: 46.26%;
+  width: 308px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  display: flex;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+#turpinat {
+  position: absolute;
+  left: 64.38%;
+  right: 6.3%;
+  top: 77.42%;
+  bottom: 6.45%;
+  width: 154px;
+  height: 48px;
+  background: #fa1818;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.atceltMini {
+  position: absolute;
+  left: 6.3%;
+  right: 63.56%;
+  top: 77.88%;
+  bottom: 6.45%;
+  width: 154px;
+  height: 48px;
+  background: #ababab;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
