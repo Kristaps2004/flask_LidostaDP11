@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/admin.css" rel="stylesheet" />
+    <title>OrmondAir: Admin</title>
+    <link rel="icon" href="atteli/clipart-airplane-logo-4.jpg" />
+  </head>
+  <body>
+    <div class="augsejaisBaneris">
+      <a href="sakums.html">
+        <h1 class="virsraksts">OrmondAir</h1>
+      </a>
+      <button id="iziet">Iziet</button>
+    </div>
+    <div class="apaksejaisBaneris">
+      <div class="lidostas">
+        <h2 class="nosaukumi">Lidostas</h2>
+        <button id="pievienotLidostas">Pievienot</button>
+        <button id="labotLidostas">Labot</button>
+        <button id="dzestLidostas">Dzēst</button>
+      </div>
+      <div class="lidmasinas">
+        <h2 class="nosaukumi">Lidmašīnas</h2>
+        <button id="pievienotLidmasinas">Pievienot</button>
+        <button id="labotLidmasinas">Labot</button>
+        <button id="dzestLidmasinas">Dzēst</button>
+      </div>
+      <div class="reisi">
+        <h2 class="nosaukumi">Reisi</h2>
+        <button id="pievienotReisi">Pievienot</button>
+        <button id="labotReisi">Labot</button>
+        <button id="dzestReisi">Dzēst</button>
+      </div>
+      <div class="statistika">
+        <h2 class="nosaukumi">Statistika</h2>
+        <a href="statistika.html"><button id="skatitStatistiku">Skatīt</button> </a>
+      </div>
+    </div>
+    <div id="popUp">
+      <form id="pievienotLidostuForm" onsubmit=" validateForm()" method="post">
+        <div class="miniapaksa">
+          <div class="miniAugsa">
+            <h2 id="miniVirsraksts">OrmondAir</h2>
+          </div>
+          <h3 class="tPievienotLidostasNosaukums" id="apaksvirsraksti">Lidostas Nosaukums</h3>
+          <input type="text" id="input" class="pievienotLidostasNosaukums" name="nosaukums" placeholder="" />
+          <h3 class="tPievienotSaīsinājums" id="apaksvirsraksti">Saīsinājums</h3>
+          <input type="text" id="input" class="pievienotSaīsinājums" placeholder="" />
+          <h3 class="tPievienotAdrese" id="apaksvirsraksti">Adrese</h3>
+          <input type="text" id="input" class="pievienotAdrese" placeholder="" />
+          <button type="submit" id="pievienotLidostu">Pievienot</button>
+          <button id="atcelt" class="atcelt">Atcelt</button>
+        </div>
+      </form>
+    </div>
+    <div id="popUp1">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tLabotLidostasizvele" id="apaksvirsraksti">Lidosta</h3>
+        <input type="text" id="input" class="labotLidostasizvele" placeholder="" />
+        <h3 class="tLabotLidostasNosaukums" id="apaksvirsraksti">Lidostas Nosaukums</h3>
+        <input type="text" id="input" class="labotLidostasNosaukums" placeholder="" />
+        <h3 class="tLabotSaīsinājums" id="apaksvirsraksti">Saīsinājums</h3>
+        <input type="text" id="input" class="labotSaīsinājums" placeholder="" />
+        <h3 class="tLabotAdrese" id="apaksvirsraksti">Adrese</h3>
+        <input type="text" id="input" class="labotAdrese" placeholder="" />
+        <button type="submit" id="labotLidostuPoga" class="dzeltenaPoga">Labot</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp2">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tdzestlidostas" id="apaksvirsraksti">Lidosta</h3>
+        <input type="text" id="input" class="dzestlidostas" placeholder="" />
+        <button type="submit" id="dzestLidostuPoga" class="dzeltenaPoga">Dzēst</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp3">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tIzveletiesLidostu" id="apaksvirsraksti">Lidosta</h3>
+        <input type="text" id="input" class="izveletiesLidostu" placeholder="" />
+        <h3 class="tPievienotModeli" id="apaksvirsraksti">Modelis</h3>
+        <input type="text" id="input" class="pievienotModeli" placeholder="" />
+        <h3 class="tPievienotRazosanasGads" id="apaksvirsraksti">Ražošanas gads</h3>
+        <input type="text" id="input" class="pievienotRazosanasGads" placeholder="" />
+        <h3 class="tPievienotVietuSkaits" id="apaksvirsraksti">Vietu Skaits</h3>
+        <input type="text" id="input" class="pievienotVietuSkaits" placeholder="" />
+        <button type="submit" id="pievienotLidmasinasPoga" class="dzeltenaPoga">Pievienot</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp4">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tLabotLidmasinas" id="apaksvirsraksti">Lidosta</h3>
+        <input type="text" id="input" class="labotLidmasinas" placeholder="" />
+        <h3 class="tLabotModeli" id="apaksvirsraksti">Modelis</h3>
+        <input type="text" id="input" class="labotModeli" placeholder="" />
+        <h3 class="tLabotRazosanasGads" id="apaksvirsraksti">Ražošanas gads</h3>
+        <input type="text" id="input" class="labotRazosanasGads" placeholder="" />
+        <h3 class="tLabotVietuSkaits" id="apaksvirsraksti">Vietu Skaits</h3>
+        <input type="text" id="input" class="labotVietuSkaits" placeholder="" />
+        <button type="submit" id="labotLidmasinasPoga" class="dzeltenaPoga">Labot</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp5">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tIzveletiesLidostu" id="apaksvirsraksti">Lidosta</h3>
+        <input type="text" id="input" class="izveletiesLidostu" placeholder="" />
+        <h3 class="tIzveletiesModeli" id="apaksvirsraksti">Modelis</h3>
+        <input type="text" id="input" class="izveletiesModeli" placeholder="" />
+        <button type="submit" id="dzestLidmasinasPoga" class="dzeltenaPoga">Dzēst</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp6">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tPievienotIzlidosanasDatumu" id="apaksvirsraksti">Izlidošanas datums</h3>
+        <input type="text" id="input" class="pievienotIzlidosanasDatumu" placeholder="" />
+        <h3 class="tPievienotLaiku" id="apaksvirsraksti">Laiks</h3>
+        <input type="text" id="input" class="pievienotLaiku" placeholder="" />
+        <h3 class="tPievienotNo" id="apaksvirsraksti">No</h3>
+        <input type="text" id="inputMazais" class="pievienotNo" placeholder="" />
+        <h3 class="tPievienotUz" id="apaksvirsraksti">Uz</h3>
+        <input type="text" id="inputMazais" class="pievienotUz" placeholder="" />
+        <button type="submit" id="pievienotReisiPoga" class="dzeltenaPoga">Pievienot</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp7">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tIzveletiesReisaNumuru" id="apaksvirsraksti">Reisa Numurs</h3>
+        <input type="text" id="input" class="izveletiesReisaNumuru" placeholder="" />
+        <h3 class="tLabotIzlidosanasDatumu" id="apaksvirsraksti">Izlidošanas datums</h3>
+        <input type="text" id="input" class="labotIzlidosanasDatumu" placeholder="" />
+        <h3 class="tLabotLaiku" id="apaksvirsraksti">Laiks</h3>
+        <input type="text" id="input" class="labotLaiku" placeholder="" />
+        <h3 class="tLabotNo" id="apaksvirsraksti">No</h3>
+        <input type="text" id="inputMazais" class="labotNo" placeholder="" />
+        <h3 class="tLabotUz" id="apaksvirsraksti">Uz</h3>
+        <input type="text" id="inputMazais" class="labotUz" placeholder="" />
+        <button type="submit" id="labotReisiPoga" class="dzeltenaPoga">Labot</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp8">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tDzestReisu" id="apaksvirsraksti">Reisa Numurs</h3>
+        <input type="text" id="input" class="dzestReisu" placeholder="" />
+        <button type="submit" id="dzestReisiPoga" class="dzeltenaPoga">Dzēst</button>
+        <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
+      </form>
+    </div>
+    <div id="popUp9">
+      <form id="superMiniForm">
+        <div class="superMiniAugsa">
+          <h2 id="superMiniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tTiesam">Vai tiešām vēlaties dzēst?</h3>
+        <button type="submit" id="turpinat">Turpināt</button>
+        <button id="atcelt" class="atceltMini">Atcelt</button>
+      </form>
+    </div>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

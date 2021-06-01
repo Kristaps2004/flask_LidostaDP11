@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/sakums.css" rel="stylesheet" />
+    <title>OrmondAir: Sākums</title>
+    <link rel="icon" href="atteli/clipart-airplane-logo-4.jpg" />
+  </head>
+  <body>
+    <div class="augsejaisBaneris">
+      <h1 class="virsraksts">OrmondAir</h1>
+      <button id="login">Ienākt</button>
+      <a href="rezervacijas.html"><button id="rezervacijas">Manas Rezervācijas</button></a>
+      <button id="meklet">Meklēt</button>
+      <input class="mekletNo" placeholder="No" />
+      <input class="mekletUz" placeholder="Galamērķis" />
+      <input type="date" id="datums" name="trip-start" value="today" min="2021-01-01" max="2021-12-31" />
+    </div>
+    <div class="apaksejaisBaneris">
+      <img class="attels1" src="atteli/attels1.jpg" alt="Lidmašīna" />
+      <img class="attels2" src="atteli/attels2.webp" alt="Lidmašīna" />
+    </div>
+    <div id="popUp">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tEpasts">E-pasts</h3>
+        <input type="email" id="epasts" placeholder="" />
+        <h3 class="tParole">Parole</h3>
+        <input type="password" id="parole" placeholder="" />
+        <button id="ienakt">Ienākt</button>
+        <button type="button" id="nakamais" class="registreties">Reģistrēties</button>
+      </form>
+    </div>
+    <div id="popUp1">
+      <form id="form">
+        <div class="miniAugsa">
+          <h2 id="miniVirsraksts">OrmondAir</h2>
+        </div>
+        <h3 class="tEpasts">E-pasts</h3>
+        <input type="email" id="epasts" placeholder="" />
+        <h3 class="tParole">Parole</h3>
+        <input type="password" id="parole" placeholder="" />
+        <input type="checkbox" id="apstiprina" name="apstiprina" value="1" />
+        <h3 class="noteikumi">Reģistrējoties jūs piekrītat OrmondAir konfidencialitātes politikai un lietošanas noteikumiem</h3>
+        <button id="registreties">Reģistrēties</button>
+      </form>
+    </div>
+    <script src="js/sakums.js"></script>
+  </body>
+</html>

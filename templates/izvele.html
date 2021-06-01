@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/izvele.css" rel="stylesheet" />
+    <title>OrmondAir</title>
+    <link rel="icon" href="atteli/clipart-airplane-logo-4.jpg" />
+  </head>
+  <body>
+    <div class="augsejaisBaneris">
+      <a href="sakums.html">
+        <h1 class="virsraksts">OrmondAir</h1>
+      </a>
+      <button id="login">Ienākt</button>
+      <button id="rezervacijas">Manas Rezervācijas</button>
+    </div>
+    <div class="apaksejaisBaneris">
+      <button class="meklet">
+        <img class="kalendars" src="atteli/unknown.png" alt="Lidmašīna" />
+        <div class="teksts">Meklēt citā datumā</div>
+      </button>
+      <div class="fons">
+        <div>
+          <span id="reisaNumursTeksts" class="reisaNumurs">Reisa numurs:</span>
+          <span id="reisaNumurs" class="reisaNumurs">FR1976</span>
+        </div>
+        <div>
+          <span id="atiesanasDatums" class="infoBilete">09.</span>
+          <span id="atiesanasMenesis" class="infoBilete">Jūn.</span>
+        </div>
+        <div>
+          <img class="lidmasina" src="atteli/lidmasina.png" alt="Lidmašīna" />
+        </div>
+        <div>
+          <span id="ilgums">Ilgums 3h 40min</span>
+        </div>
+        <div>
+          <span id="atiesanasLaiks" class="infoBilete">19.55</span>
+          <span id="atiesanasPilseta" class="infoBilete">Oslo</span>
+        </div>
+        <div>
+          <span id="ielidosanasLaiks" class="infoBilete">19.55</span>
+          <span id="ielidosanasPilseta" class="infoBilete">Alikante</span>
+        </div>
+        <div>
+          <span id="biletesCena" class="infoBilete">120.99€</span>
+        </div>
+      </div>
+      <div class="pasazieris">
+        <h1 class="miniVirsraksts">Pasažieris</h1>
+        <h2 id="vards">Vārds</h2>
+        <input class="vards" placeholder="" />
+        <h2 id="uzvards">Uzvārds</h2>
+        <input class="uzvards" placeholder="" />
+        <h2 id="vecums">Vecums</h2>
+        <input type="text" class="vecums1" placeholder="D" maxlength="2" />
+        <input type="text" class="vecums2" placeholder="M" maxlength="2" />
+        <input type="text" class="vecums3" placeholder="G" maxlength="4" />
+        <h2 id="dzimums">Dzimums</h2>
+        <input class="dzimums" placeholder="" />
+        <h2 id="tautiba">Tautība</h2>
+        <input class="tautiba" placeholder="" />
+      </div>
+      <button id="rezervet">Rezervēt</button>
+    </div>
+    <script src="js/izvele.js"></script>
+  </body>
+</html>
