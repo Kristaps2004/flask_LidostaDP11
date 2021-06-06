@@ -43,10 +43,11 @@ document.getElementById("dzestReisi").addEventListener("click", () => {
   popUp8.style.display = "block";
 });
 
-document.getElementById("labott").addEventListener("click", () => {
-  let popUp8 = document.getElementById("popUp8");
-  popUp8.style.display = "block";
+document.getElementById("atcelt").addEventListener("click", () => {
+let popUp = document.getElementById("popUp");
+  popUp.style.display = "none";
 });
+
 
 //form
 
