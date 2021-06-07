@@ -14,9 +14,9 @@
       <button id="login">Ienākt</button>
       <a href="/rezervacijas"><button id="rezervacijas">Manas Rezervācijas</button></a>
       <button id="meklet">Meklēt</button>
-      <input class="mekletNo" placeholder="No" />
-      <input class="mekletUz" placeholder="Galamērķis" />
-      <input type="date" id="datums" name="trip-start" value="today" min="2021-01-01" max="2021-12-31" />
+      <input class="mekletNo" placeholder="No" required/>
+      <input class="mekletUz" placeholder="Galamērķis" required/>
+      <input type="date" id="datums" name="trip-start" value="today" min="2021-01-01" max="2021-12-31" required/>
     </div>
     <div class="apaksejaisBaneris">
       <img class="attels1" src="/static/img/attels1.jpg" alt="Lidmašīna" />
@@ -34,14 +34,14 @@
           <button type="button" class="toggle-btn" onclick="register()">Register</button>
         </div>
         <form id="login" class="input-group">
-          <input type="text" class="input-field" placeholder="E-pasts" />
-          <input type="text" class="input-field" placeholder="Parole" />
+          <input type="text" class="input-field" placeholder="E-pasts" required/>
+          <input type="text" class="input-field" placeholder="Parole" required/>
           <input type="checkbox" class="check-box" /><span>Remember Password</span>
           <button type="submit" class="submit-btn">Login</button>
         </form>
         <form id="register" class="input-group">
-          <input type="text" class="input-field" placeholder="E-pasts" />
-          <input type="text" class="input-field" placeholder="Parole" />
+          <input type="text" class="input-field" placeholder="E-pasts" required/>
+          <input type="text" class="input-field" placeholder="Parole" required/>
           <input type="checkbox" class="check-box" />
           <div class="piekritNoteikumiem">Reģistrējoties jūs piekrītat OrmondAir konfidencialitātes politikai un lietošanas noteikumiem</div>
           <button type="submit" class="submit-btn">Register</button>
