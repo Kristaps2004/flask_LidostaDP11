@@ -35,6 +35,16 @@
   user-select: none;
 }
 
+#iziet {
+  position: absolute;
+  left: 90%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
 #ienakt {
   position: absolute;
   left: 90.35%;
