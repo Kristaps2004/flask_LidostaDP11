@@ -35,7 +35,7 @@
   user-select: none;
 }
 
-#login {
+#ienakt {
   position: absolute;
   left: 90.35%;
   right: 1.74%;
@@ -202,8 +202,8 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#form {
-  position: absolute;
+.form-box {
+  position: fixed;
   left: 38.54%;
   right: 38.54%;
   top: 24.54%;
@@ -212,7 +212,7 @@
   height: 550px;
   background: #ffffff;
   border-radius: 10px;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .miniAugsa {
@@ -222,161 +222,110 @@
   left: 0x;
   top: 0px;
   background: #073590;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 #miniVirsraksts {
   position: absolute;
   left: 4.77%;
-  right: 64.77%;
-  top: 4.55%;
-  bottom: 90.18%;
+  top: 15%;
   width: 230px;
   height: 58px;
-  font-family: Post No Bills Colombo Medium;
+  font-family: Post No Bills Colombo;
   font-style: normal;
   font-size: 36px;
   display: flex;
   color: #ffffff;
+  user-select: none;
 }
 
-.tEpasts {
-  position: absolute;
-  width: 55px;
-  height: 18px;
-  left: 41px;
-  top: 134px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 15px;
-  display: flex;
-  color: #000000;
+.button-box {
+  top: 80px;
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  user-select: none;
 }
 
-.tParole {
-  position: absolute;
-  width: 41px;
-  height: 18px;
-  left: 43px;
-  top: 227px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 15px;
-  display: flex;
-  color: #000000;
-}
-
-#epasts {
-  position: absolute;
-  left: 8.18%;
-  right: 8.41%;
-  top: 29.27%;
-  bottom: 62.55%;
-  width: 367px;
-  height: 45px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#parole {
-  position: absolute;
-  left: 8.18%;
-  right: 8.41%;
-  top: 45.82%;
-  bottom: 46%;
-  width: 367px;
-  height: 45px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#ienakt {
-  position: absolute;
-  left: 32.5%;
-  right: 32.5%;
-  top: 61.09%;
-  bottom: 30.18%;
-  width: 154px;
-  height: 48px;
-  background: #f1c933;
-  border-radius: 8px;
-  outline: none;
+.toggle-btn {
+  width: 98px;
+  height: 40px;
   cursor: pointer;
-  border: 1px solid transparent;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
 }
 
-.registreties {
+#btn {
+  left: 0;
   position: absolute;
-  width: 85px;
-  height: 22px;
-  left: 177px;
-  top: 437px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 17px;
-  display: flex;
-  color: #073590;
-  border: none;
-  display: inline-block;
-  background-color: inherit;
-  cursor: pointer;
-}
-
-#popUp1 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
+  width: 98px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #f1c933;
+  border-radius: 30px;
+  transition: 0.5s;
 }
 
-#apstiprina {
+.input-group {
+  top: 200px;
   position: absolute;
+  width: 320px;
+  height: 260px;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  padding-bottom: 10px;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 80%;
+  height: 40px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #f1c933;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  user-select: none;
+}
+
+.check-box {
+  margin: 30px 10px 30px 0;
   width: 25px;
   height: 25px;
-  left: 33px;
-  top: 320px;
-  border: 2px solid #000000;
-  box-sizing: border-box;
 }
 
-.noteikumi {
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 118px;
   position: absolute;
-  left: 15.45%;
-  right: 15.23%;
-  top: 56.55%;
-  bottom: 31.27%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #000000;
 }
 
-#registreties {
+.piekritNoteikumiem {
+  left: 30px;
+  color: #777;
+  font-size: 12px;
+  bottom: 110px;
   position: absolute;
-  left: 32.5%;
-  right: 32.5%;
-  top: 74.91%;
-  bottom: 16.36%;
-  width: 154px;
-  height: 48px;
-  background: #f1c933;
-  border-radius: 8px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid transparent;
+}
+
+#login {
+  left: 50px;
+}
+
+#register {
+  left: 450px;
 }

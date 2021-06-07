@@ -1,9 +1,20 @@
-document.getElementById("login").addEventListener("click", () => {
+document.getElementById("ienakt").addEventListener("click", () => {
   let popUp = document.getElementById("popUp");
   popUp.style.display = "block";
 });
 
-document.getElementById("nakamais").addEventListener("click", () => {
-  let popUp1 = document.getElementById("popUp1");
-  popUp1.style.display = "block";
-});
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
+
+function register() {
+  x.style.left = "-400px";
+  y.style.left = "50px";
+  z.style.left = "100px";
+}
+
+function login() {
+  x.style.left = "50px";
+  y.style.left = "450px";
+  z.style.left = "0px";
+}

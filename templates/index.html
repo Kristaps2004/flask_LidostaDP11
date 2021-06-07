@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/static/css/sakums.css" rel="stylesheet" />
+    <link href="/static/css/index.css" rel="stylesheet" />
     <title>OrmondAir: Sākums</title>
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
@@ -23,31 +23,29 @@
       <img class="attels2" src="/static/img/attels2.webp" alt="Lidmašīna" />
     </div>
     <div id="popUp">
-      <form id="form">
+      <div class="form-box">
         <div class="miniAugsa">
           <h2 id="miniVirsraksts">OrmondAir</h2>
         </div>
-        <h3 class="tEpasts">E-pasts</h3>
-        <input type="email" id="epasts" placeholder="" />
-        <h3 class="tParole">Parole</h3>
-        <input type="password" id="parole" placeholder="" />
-        <button id="ienakt">Ienākt</button>
-        <button type="button" id="nakamais" class="registreties">Reģistrēties</button>
-      </form>
-    </div>
-    <div id="popUp1">
-      <form id="form">
-        <div class="miniAugsa">
-          <h2 id="miniVirsraksts">OrmondAir</h2>
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
         </div>
-        <h3 class="tEpasts">E-pasts</h3>
-        <input type="email" id="epasts" placeholder="" />
-        <h3 class="tParole">Parole</h3>
-        <input type="password" id="parole" placeholder="" />
-        <input type="checkbox" id="apstiprina" name="apstiprina" value="1" />
-        <h3 class="noteikumi">Reģistrējoties jūs piekrītat OrmondAir konfidencialitātes politikai un lietošanas noteikumiem</h3>
-        <button id="registreties">Reģistrēties</button>
-      </form>
+        <form id="login" class="input-group">
+          <input type="text" class="input-field" placeholder="E-pasts" />
+          <input type="text" class="input-field" placeholder="Parole" />
+          <input type="checkbox" class="check-box" /><span>Remember Password</span>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <form id="register" class="input-group">
+          <input type="text" class="input-field" placeholder="E-pasts" />
+          <input type="text" class="input-field" placeholder="Parole" />
+          <input type="checkbox" class="check-box" />
+          <div class="piekritNoteikumiem">Reģistrējoties jūs piekrītat OrmondAir konfidencialitātes politikai un lietošanas noteikumiem</div>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
     </div>
     <script src="/static/js/index.js"></script>
   </body>
