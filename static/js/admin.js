@@ -14,8 +14,8 @@ document.getElementById("dzestLidostas").addEventListener("click", () => {
 });
 
 document.getElementById("pievienotLidmasinas").addEventListener("click", () => {
-  let popUp3 = document.getElementById("popUp3");
-  popUp3.style.display = "block";
+  let popUp2 = document.getElementById("popUp3");
+  popUp2.style.display = "block";
 });
 
 document.getElementById("labotLidmasinas").addEventListener("click", () => {
