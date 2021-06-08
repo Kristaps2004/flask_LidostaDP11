@@ -44,17 +44,7 @@ document.getElementById("dzestReisi").addEventListener("click", () => {
 });
 
 document.getElementById("atcelt").addEventListener("click", () => {
-let popUp = document.getElementById("popUp");
+  let popUp = document.getElementById("popUp");
   popUp.style.display = "none";
 });
 
-
-//form
-
-function validateForm() {
-  var x = document.forms["pievienotLidostuForm"]["nosaukums"].value;
-  /*if (x == "") {
-    alert("Nav ievadīts lidostas nosaukums");
-    return false;
-  }*/
-}
