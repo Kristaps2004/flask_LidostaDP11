@@ -18,3 +18,8 @@ function login() {
   y.style.left = "450px";
   z.style.left = "0px";
 }
+
+document.getElementById("iziet").addEventListener("click", () => {
+  let popUp = document.getElementById("popUp");
+  popUp.style.display = "block";
+});
