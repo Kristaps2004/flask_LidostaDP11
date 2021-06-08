@@ -21,5 +21,5 @@ function login() {
 
 document.getElementById("iziet").addEventListener("click", () => {
   let popUp = document.getElementById("popUp");
-  popUp.style.display = "block";
+  popUp.style.display = "none";
 });
