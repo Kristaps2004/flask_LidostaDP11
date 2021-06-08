@@ -3,9 +3,9 @@ document.getElementById("ienakt").addEventListener("click", () => {
   popUp.style.display = "block";
 });
 
-var x = document.getElementById("login");
-var y = document.getElementById("register");
-var z = document.getElementById("btn");
+let x = document.getElementById("login");
+let y = document.getElementById("register");
+let z = document.getElementById("btn");
 
 function register() {
   x.style.left = "-400px";
