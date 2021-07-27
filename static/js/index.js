@@ -95,12 +95,12 @@ prevBtn2.addEventListener("click", () => {
 });
 
 carouselSlide2.addEventListener("transitionend", () => {
-    if (carouselImages2[counter2].id === 'lastClone') {
+    if (carouselImages2[counter2].id === 'lastClone2') {
         carouselSlide2.style.transition = "none";
         counter2 = carouselImages2.length -2;
         carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
     }
-    if (carouselImages2[counter2].id === 'firstClone') {
+    if (carouselImages2[counter2].id === 'firstClone2') {
         carouselSlide2.style.transition = "none";
         counter2 = carouselImages2.length - counter2;
         carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
