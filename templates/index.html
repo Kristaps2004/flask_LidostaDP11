@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/static/css/index.css" rel="stylesheet" />
     <title>OrmondAir: Sākums</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
   <body>
@@ -19,8 +20,32 @@
       <input type="date" id="datums" name="trip-start" min="2021-01-01" max="2021-12-31" required/>
     </div>
     <div class="apaksejaisBaneris">
-      <img class="attels1" src="/static/img/attels1.jpg" alt="Lidmašīna" />
-      <img class="attels2" src="/static/img/attels2.webp" alt="Lidmašīna" />
+      <div class="carousel-container">
+        <i class="fas fa-arrow-left" id=prevBtn></i>
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
+        <div class="carousel-slide">
+          <img class="attels" src="/static/img/5.webp" id="lastClone" alt="" />
+          <img class="attels" src="/static/img/1.jpg" alt="" />
+          <img class="attels" src="/static/img/2.jpg" alt="" />
+          <img class="attels" src="/static/img/3.jpg" alt="" />
+          <img class="attels" src="/static/img/4.jpg" alt="" />
+          <img class="attels" src="/static/img/5.webp" alt="" />
+           <img class="attels" src="/static/img/1.jpg" id="firstClone" alt="" />
+        </div>
+      </div>
+      <div class="carousel-container2">
+      <i class="fas fa-arrow-left" id=prevBtn2></i>
+      <i class="fas fa-arrow-right" id="nextBtn2"></i>
+      <div class="carousel-slide2">
+        <img class="attels" src="/static/img/5a.jpg" id="lastClone2" alt="" />
+        <img class="attels" src="/static/img/1a.jpg" alt="" />
+        <img class="attels" src="/static/img/2a.webp" alt="" />
+        <img class="attels" src="/static/img/3a.jpg" alt="" />
+        <img class="attels" src="/static/img/4a.jpg" alt="" />
+        <img class="attels" src="/static/img/5a.jpg" alt="" />
+        <img class="attels" src="/static/img/1a.jpg" id="firstClone2" alt="" />
+      </div>
+    </div>
     </div>
     <div id="popUp">
       <div class="form-box">

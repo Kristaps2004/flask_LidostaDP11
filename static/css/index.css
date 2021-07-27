@@ -88,32 +88,6 @@
   background: rgba(186, 182, 182, 0.53);
 }
 
-.attels1 {
-  position: absolute;
-  left: 2.43%;
-  right: 51.74%;
-  top: 10%;
-  bottom: 12%;
-  width: 880px;
-  height: 409.25px;
-  border: 5px solid #073590;
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
-.attels2 {
-  position: absolute;
-  left: 50.9%;
-  right: 3.26%;
-  top: 10%;
-  bottom: 11.81%;
-  width: 880px;
-  height: 409.25px;
-  border: 5px solid #073590;
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
 #main_menu {
   position: absolute;
   left: 18.96%;
@@ -338,4 +312,67 @@ span {
 
 #register {
   left: 450px;
+}
+
+.carousel-container {
+  position: absolute;
+  left: 2.43%;
+  right: 51.74%;
+  top: 10%;
+  bottom: 12%;
+  width: 880px;
+  height: 409.25px;
+  border: 5px solid #073590;
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-slide,
+.carousel-slide2 {
+  display: flex;
+  position: absolute;
+}
+
+#prevBtn,
+#prevBtn2 {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 5%;
+  font-size: 30px;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#nextBtn,
+#nextBtn2 {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.attels {
+  width: 880px;
+  height: 409.25px;
+}
+
+.carousel-container2 {
+  position: absolute;
+  left: 50.9%;
+  right: 3.26%;
+  top: 10%;
+  bottom: 11.81%;
+  width: 880px;
+  height: 409.25px;
+  border: 5px solid #073590;
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
 }
