@@ -163,14 +163,28 @@
   border: 1px solid transparent;
 }
 
-#datums {
+#datumsTurp {
   position: absolute;
   left: 18.96%;
   right: 55.57%;
   top: 62%;
   bottom: 30.74%;
   border-radius: 10px;
-  width: 220px;
+  width: 240px;
+  height: 51px;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+#datumsAtpakal {
+  position: absolute;
+  left: 32%;
+  right: 55.57%;
+  top: 62%;
+  bottom: 30.74%;
+  border-radius: 10px;
+  width: 240px;
   height: 51px;
   padding-left: 20px;
   outline: none;
@@ -375,4 +389,52 @@ span {
   box-sizing: border-box;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.celojumaVeids1 {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  left: 46%;
+  right: 55.57%;
+  top: 65.5%;
+  bottom: 30.74%;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.celojumaVeids2 {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  font-size: 18px;
+  left: 52%;
+  right: 55.57%;
+  top: 65.5%;
+  bottom: 30.74%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.radio1 {
+  position: absolute;
+  left: 45%;
+  right: 55.57%;
+  top: 66%;
+  bottom: 30.74%;
+}
+
+.radio2 {
+  position: absolute;
+  left: 51%;
+  right: 55.57%;
+  top: 66%;
+  bottom: 30.74%;
+}
+
+input[type='radio'] {
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
 }
