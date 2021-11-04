@@ -1,7 +1,7 @@
 # Projekts-Lidosta-DP11-3Grupa
 
 ### Grupa:
-DP1-1
+DP2-1
 
 ### Autori:
 * Kristaps Ešmits
