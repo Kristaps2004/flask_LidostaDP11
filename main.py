@@ -27,7 +27,7 @@ def statistika():
 
 @app.route('/admin/lidostas')
 def lidostas():
-  return render_template("adminlidosta.html")
+  return render_template("adminlidostas.html")
 
 @app.route('/admin/lidmasinas')
 def lidmasinas():

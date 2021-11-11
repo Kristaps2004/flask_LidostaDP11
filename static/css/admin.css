@@ -54,219 +54,12 @@
   background: rgba(186, 182, 182, 0.53);
 }
 
-.lidostas {
+.pamatne {
   position: absolute;
-  left: 9.79%;
-  right: 9.86%;
-  top: 8.34%;
-  bottom: 73.35%;
-  background: #ffffff;
-  border-radius: 10px;
-}
-
-.nosaukumi {
-  position: absolute;
-  left: 0%;
-  right: 90.8%;
-  top: 0.15%;
-  bottom: 75.84%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 24px;
-  display: flex;
-  margin-left: 20px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-#pievienotLidostas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 15.47%;
-  right: 65.95%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#pievienotLidmasinas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 15.47%;
-  right: 65.95%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#pievienotReisi {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 15.47%;
-  right: 65.95%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#labotLidmasinas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 38.46%;
-  right: 42.96%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#labotReisi {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 38.46%;
-  right: 42.96%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#labotLidostas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 38.46%;
-  right: 42.96%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#dzestLidostas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 61.45%;
-  right: 19.97%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#dzestLidmasinas {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 61.45%;
-  right: 19.97%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#dzestReisi {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 61.45%;
-  right: 19.97%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#skatitStatistiku {
-  position: absolute;
-  width: 286.67px;
-  height: 75.94px;
-  left: 15.47%;
-  right: 65.95%;
-  top: 41.14%;
-  bottom: 13.29%;
-  background: #c4c4c4;
-  border-radius: 10px;
-  border-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.lidmasinas {
-  position: absolute;
-  left: 9.72%;
-  right: 9.93%;
-  top: 28.85%;
-  bottom: 52.84%;
-  background: #ffffff;
-  border-radius: 10px;
-}
-
-.reisi {
-  position: absolute;
-  left: 9.93%;
-  right: 9.72%;
-  top: 49.36%;
-  bottom: 32.33%;
-  background: #ffffff;
-  border-radius: 10px;
-}
-
-.statistika {
-  position: absolute;
-  left: 9.79%;
-  right: 9.86%;
-  top: 69.87%;
-  bottom: 11.82%;
+  left: 9.17%;
+  right: 9.17%;
+  top: 9.03%;
+  bottom: 9.12%;
   background: #ffffff;
   border-radius: 10px;
 }
@@ -331,7 +124,7 @@
   position: absolute;
   width: 945px;
   height: 77.89px;
-  left: 0x;
+  left: 0px;
   top: 0px;
   background: #073590;
   border-top-left-radius: 10px;
@@ -353,58 +146,6 @@
   color: #ffffff;
 }
 
-#popUp {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tPievienotLidostasNosaukums {
-  left: 3.28%;
-  top: 22%;
-}
-
-.tPievienotSaīsinājums {
-  left: 3.17%;
-  top: 40.97%;
-}
-
-.tPievienotAdrese {
-  left: 3.49%;
-  top: 58.32%;
-}
-
-.pievienotLidostasNosaukums {
-  left: 3.49%;
-  top: 28.98%;
-}
-
-.pievienotSaīsinājums {
-  left: 3.49%;
-  top: 46.33%;
-}
-
-.pievienotAdrese {
-  left: 3.49%;
-  top: 64.58%;
-}
-
-#pievienotLidostu {
-  position: absolute;
-  left: 80.63%;
-  top: 82.83%;
-  width: 154px;
-  height: 48px;
-  background: #f1c933;
-  border-radius: 8px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid transparent;
-}
-
 #atcelt {
   position: absolute;
   width: 154px;
@@ -421,15 +162,6 @@
   top: 82.83%;
 }
 
-#popUp1 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .atceltLielakaDala {
   left: 62.12%;
   top: 89.45%;
@@ -444,349 +176,6 @@
   outline: none;
   cursor: pointer;
   border: 1px solid transparent;
-}
-
-#labotLidostuPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#dzestLidostuPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#pievienotLidmasinasPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#labotLidmasinasPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#dzestLidmasinasPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#pievienotReisiPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#labotReisiPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-#dzestReisiPoga {
-  left: 80.63%;
-  top: 89.45%;
-}
-
-.tLabotLidostasizvele {
-  left: 3.49%;
-  top: 18.25%;
-}
-
-.tLabotLidostasNosaukums {
-  left: 3.49%;
-  top: 37.21%;
-}
-
-.tLabotSaīsinājums {
-  left: 3.28%;
-  top: 55.99%;
-}
-
-.tLabotAdrese {
-  left: 3.49%;
-  top: 73.52%;
-}
-
-.labotLidostasizvele {
-  left: 3.28%;
-  top: 25.04%;
-}
-
-.labotLidostasNosaukums {
-  left: 3.49%;
-  top: 43.96%;
-}
-
-.labotSaīsinājums {
-  left: 3.49%;
-  top: 61.32%;
-}
-
-.labotAdrese {
-  left: 3.49%;
-  top: 79.56%;
-}
-
-#popUp2 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tdzestlidostas {
-  left: 2.75%;
-  top: 21.65%;
-}
-
-.dzestlidostas {
-  left: 2.75%;
-  top: 29.34%;
-}
-
-#popUp3 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tIzveletiesLidostu {
-  left: 3.28%;
-  top: 16.64%;
-}
-
-.tPievienotModeli {
-  left: 3.39%;
-  top: 33.45%;
-}
-
-.tPievienotRazosanasGads {
-  left: 3.39%;
-  top: 49.91%;
-}
-
-.tPievienotVietuSkaits {
-  left: 3.39%;
-  top: 68.34%;
-}
-
-.izveletiesLidostu {
-  left: 3.49%;
-  top: 21.65%;
-}
-
-.pievienotModeli {
-  left: 3.49%;
-  top: 38.46%;
-}
-
-.pievienotRazosanasGads {
-  left: 3.49%;
-  top: 55.81%;
-}
-
-.pievienotVietuSkaits {
-  left: 3.49%;
-  top: 74.06%;
-}
-
-#popUp4 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tLabotLidmasinas {
-  left: 3.28%;
-  top: 16.64%;
-}
-
-.tLabotModeli {
-  left: 3.39%;
-  top: 33.45%;
-}
-
-.tLabotRazosanasGads {
-  left: 3.39%;
-  top: 49.91%;
-}
-
-.tLabotVietuSkaits {
-  left: 3.39%;
-  top: 68.34%;
-}
-
-.labotLidmasinas {
-  left: 3.49%;
-  top: 21.65%;
-}
-
-.labotModeli {
-  left: 3.49%;
-  top: 38.46%;
-}
-
-.labotRazosanasGads {
-  left: 3.49%;
-  top: 55.81%;
-}
-
-.labotVietuSkaits {
-  left: 3.49%;
-  top: 74.06%;
-}
-
-#popUp5 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tIzveletiesModeli {
-  left: 3.28%;
-  top: 32.02%;
-}
-
-.izveletiesModeli {
-  left: 3.39%;
-  top: 37.03%;
-}
-
-#popUp6 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tPievienotIzlidosanasDatumu {
-  left: 2.96%;
-  top: 25.76%;
-}
-
-.tPievienotLaiku {
-  left: 3.17%;
-  top: 44.36%;
-}
-
-.tPievienotNo {
-  left: 3.49%;
-  top: 61.72%;
-}
-
-.tPievienotUz {
-  left: 39.15%;
-  top: 61.72%;
-}
-
-.pievienotIzlidosanasDatumu {
-  left: 3.49%;
-  top: 32.34%;
-}
-
-.pievienotLaiku {
-  left: 3.49%;
-  top: 49.69%;
-}
-
-.pievienotNo {
-  left: 3.49%;
-  top: 67.94%;
-}
-
-.pievienotUz {
-  left: 39.15%;
-  top: 67.44%;
-}
-
-#popUp7 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tIzveletiesReisaNumuru {
-  left: 3.39%;
-  top: 16.64%;
-}
-
-.tLabotIzlidosanasDatumu {
-  left: 3.49%;
-  top: 35.06%;
-}
-
-.tLabotLaiku {
-  left: 3.28%;
-  top: 53.67%;
-}
-
-.tLabotNo {
-  left: 3.49%;
-  top: 71.02%;
-}
-
-.tLabotUz {
-  left: 39.15%;
-  top: 71.02%;
-}
-
-.izveletiesReisaNumuru {
-  left: 3.49%;
-  top: 22.72%;
-}
-
-.labotIzlidosanasDatumu {
-  left: 3.49%;
-  top: 41.64%;
-}
-
-.labotLaiku {
-  left: 3.49%;
-  top: 58.99%;
-}
-
-.labotNo {
-  left: 3.49%;
-  top: 77.24%;
-}
-
-.labotUz {
-  left: 39.15%;
-  top: 77.24%;
-}
-
-#popUp8 {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tDzestReisu {
-  left: 3.17%;
-  top: 21.47%;
-}
-
-.dzestReisu {
-  left: 3.49%;
-  top: 27.55%;
 }
 
 #popUp9 {
@@ -874,4 +263,68 @@
   outline: none;
   cursor: pointer;
   border: 1px solid transparent;
+}
+
+#lidostas{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 10.01%;
+  right: 54.97%;
+  top: 3.36%;
+  bottom: 51.14%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#lidmasinas{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 54.97%;
+  right: 10.01%;
+  top: 3.36%;
+  bottom: 51.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#reisi{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 10.01%;
+  right: 54.97%;
+  top: 51.54%;
+  bottom: 2.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#skatitStatistiku {
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 54.97%;
+  right: 10.01%;
+  top: 51.54%;
+  bottom: 2.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
 }

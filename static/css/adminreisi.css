@@ -19,6 +19,42 @@
   background: #073590;
 }
 
+.miniapaksa {
+  position: absolute;
+  left: 25.36%;
+  top: 21.94%;
+  width: 945px;
+  height: 559px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.miniAugsa {
+  position: absolute;
+  width: 945px;
+  height: 77.89px;
+  left: 0px;
+  top: 0px;
+  background: #073590;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#miniVirsraksts {
+  position: absolute;
+  left: 2.01%;
+  top: 3.76%;
+  width: 200px;
+  height: 50px;
+  top: 14px;
+  left: 19px;
+  font-family: Post No Bills Colombo Medium;
+  font-style: normal;
+  font-size: 36px;
+  display: flex;
+  color: #ffffff;
+}
+
 .virsraksts {
   position: absolute;
   left: 0%;
@@ -39,6 +75,33 @@
   background: rgba(186, 182, 182, 0.53);
 }
 
+.reisi {
+  position: absolute;
+  left: 9.79%;
+  right: 9.86%;
+  top: 8.34%;
+  bottom: 73.35%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.nosaukumi {
+  position: absolute;
+  left: 0%;
+  right: 90.8%;
+  top: 0.15%;
+  bottom: 75.84%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 #atgriezties_admin {
   position: absolute;
   width: 152px;
@@ -51,5 +114,264 @@
   border-style: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
+  cursor: pointer;
+}
+
+#apaksvirsraksti {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  color: #000000;
+  width: 300px;
+}
+
+#input {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 883px;
+  height: 40px;
+}
+
+#inputMazais {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 307px;
+  height: 40px;
+}
+
+#popUp6 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#popUp7 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#popUp8 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#pievienotReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#labotReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+#dzestReisiPoga {
+  left: 80.63%;
+  top: 89.45%;
+}
+
+
+.tPievienotIzlidosanasDatumu {
+  left: 2.96%;
+  top: 25.76%;
+}
+
+.tPievienotLaiku {
+  left: 3.17%;
+  top: 44.36%;
+}
+
+.tPievienotNo {
+  left: 3.49%;
+  top: 61.72%;
+}
+
+.tPievienotUz {
+  left: 39.15%;
+  top: 61.72%;
+}
+
+.pievienotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 32.34%;
+}
+
+.pievienotLaiku {
+  left: 3.49%;
+  top: 49.69%;
+}
+
+.pievienotNo {
+  left: 3.49%;
+  top: 67.94%;
+}
+
+.pievienotUz {
+  left: 39.15%;
+  top: 67.44%;
+}
+
+.tIzveletiesReisaNumuru {
+  left: 3.39%;
+  top: 16.64%;
+}
+
+.tLabotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 35.06%;
+}
+
+.tLabotLaiku {
+  left: 3.28%;
+  top: 53.67%;
+}
+
+.tLabotNo {
+  left: 3.49%;
+  top: 71.02%;
+}
+
+.tLabotUz {
+  left: 39.15%;
+  top: 71.02%;
+}
+
+.izveletiesReisaNumuru {
+  left: 3.49%;
+  top: 22.72%;
+}
+
+.labotIzlidosanasDatumu {
+  left: 3.49%;
+  top: 41.64%;
+}
+
+.labotLaiku {
+  left: 3.49%;
+  top: 58.99%;
+}
+
+.labotNo {
+  left: 3.49%;
+  top: 77.24%;
+}
+
+.labotUz {
+  left: 39.15%;
+  top: 77.24%;
+}
+
+.tDzestReisu {
+  left: 3.17%;
+  top: 21.47%;
+}
+
+.dzestReisu {
+  left: 3.49%;
+  top: 27.55%;
+}
+
+#atcelt {
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #ababab;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.atcelt {
+  left: 62.12%;
+  top: 82.83%;
+}
+
+.atceltLielakaDala {
+  left: 62.12%;
+  top: 89.45%;
+}
+
+.dzeltenaPoga {
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+#pievienotReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#labotReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 38.46%;
+  right: 42.96%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#dzestReisi {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 61.45%;
+  right: 19.97%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
   cursor: pointer;
 }

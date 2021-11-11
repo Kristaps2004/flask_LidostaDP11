@@ -22,16 +22,11 @@
 .virsraksts {
   position: absolute;
   left: 0%;
-  right: 70.97%;
-  top: 0%;
-  bottom: 66.21%;
   font-family: Post No Bills Colombo Medium;
   font-size: 96px;
   display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
   margin-left: 20px;
+  color: #ffffff;
   user-select: none;
 }
 
