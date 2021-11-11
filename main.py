@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 app = Flask('app')
 
 
@@ -22,5 +24,18 @@ def rezervacijas():
 @app.route('/statistika')
 def statistika():
   return render_template("statistika.html")
+
+@app.route('/admin/lidostas')
+def lidostas():
+  return render_template("adminlidosta.html")
+
+@app.route('/admin/lidmasinas')
+def lidmasinas():
+  return render_template("adminlidmasinas.html")
+
+@app.route('/admin/reisi')
+def reisi():
+  return render_template("adminreisi.html")
+
 
 app.run(host='0.0.0.0', port=8080)

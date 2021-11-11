@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Post No Bills Colombo Medium";
+  src: url("../fonts/post-no-bills-colombo.medium.ttf");
+}
+
+.augsejaisBaneris {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 84.28%;
+  background: #073590;
+}
+
+.virsraksts {
+  position: absolute;
+  left: 0%;
+  font-family: Post No Bills Colombo Medium;
+  font-size: 96px;
+  display: flex;
+  margin-left: 20px;
+  color: #ffffff;
+  user-select: none;
+}
+
+.apaksejaisBaneris {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 15.72%;
+  bottom: 0%;
+  background: rgba(186, 182, 182, 0.53);
+}
+
+#atgriezties_admin {
+  position: absolute;
+  width: 152px;
+  height: 50.63px;
+  left: 89.1%;
+  top: 35.4%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#pievienotLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 15.47%;
+  right: 65.95%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#labotLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 38.46%;
+  right: 42.96%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#dzestLidmasinas {
+  position: absolute;
+  width: 286.67px;
+  height: 75.94px;
+  left: 61.45%;
+  right: 19.97%;
+  top: 41.14%;
+  bottom: 13.29%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nosaukumi {
+  position: absolute;
+  left: 0%;
+  right: 90.8%;
+  top: 0.15%;
+  bottom: 75.84%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.lidostas {
+  position: absolute;
+  left: 9.79%;
+  right: 9.86%;
+  top: 8.34%;
+  bottom: 73.35%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.miniapaksa {
+  position: absolute;
+  left: 25.36%;
+  top: 21.94%;
+  width: 945px;
+  height: 559px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.miniAugsa {
+  position: absolute;
+  width: 945px;
+  height: 77.89px;
+  left: 0x;
+  top: 0px;
+  background: #073590;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tPievienotLidostasNosaukums {
+  left: 3.28%;
+  top: 22%;
+}
+
+.tPievienotSaīsinājums {
+  left: 3.17%;
+  top: 40.97%;
+}
+
+.tPievienotAdrese {
+  left: 3.49%;
+  top: 58.32%;
+}
+
+.pievienotLidostasNosaukums {
+  left: 3.49%;
+  top: 28.98%;
+}
+
+.pievienotSaīsinājums {
+  left: 3.49%;
+  top: 46.33%;
+}
+
+.pievienotAdrese {
+  left: 3.49%;
+  top: 64.58%;
+}
+
+.atcelt {
+  left: 62.12%;
+  top: 82.83%;
+}
+
+.tLabotLidostasizvele {
+  left: 3.49%;
+  top: 18.25%;
+}
+
+.tLabotLidostasNosaukums {
+  left: 3.49%;
+  top: 37.21%;
+}
+
+.tLabotSaīsinājums {
+  left: 3.28%;
+  top: 55.99%;
+}
+
+.tLabotAdrese {
+  left: 3.49%;
+  top: 73.52%;
+}
+
+.dzeltenaPoga {
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.atceltLielakaDala {
+  left: 62.12%;
+  top: 89.45%;
+}
+
+.tdzestlidostas {
+  left: 2.75%;
+  top: 21.65%;
+}
+
+.dzestlidostas {
+  left: 2.75%;
+  top: 29.34%;
+}
