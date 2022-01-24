@@ -18,67 +18,45 @@
       </a>
     </div>
       <div class="apaksejaisBaneris">
-        <div class="lidmasinas">
-          <h2 class="nosaukumi">Lidmašīnas</h2>
-          <button id="pievienotLidmasinas">Pievienot</button>
-          <button id="labotLidmasinas">Labot</button>
-          <button id="dzestLidmasinas">Dzēst</button>
-        </div>
+        <div class = "tabula">
+        <h1 id = "virsraksts">Lidmašīnas</h1>
+        {% if tasks|length < 1 %}
+        <h4 id = "apaksraksts">Nav pievienota neviena lidmašīna! </h4>
+        {% else %}
+        <table>
+           <tr>
+            <th class = "teksts">Lidosta</th>
+            <th class = "teksts">Modelis</th>
+            <th class = "teksts">Ražošanas gads</th>
+            <th class = "teksts">Vietu skaits</th>
+            <th class = "teksts">Pievienošanas datums</th>
+            <th class = "teksts">Darbības</th>
+          </tr>
+          {% for task in tasks %}
+            <tr>
+              <td class = "dbteksts">{{ task.content }}</td>
+              <td class = "dbteksts">{{ task.modelis }}</td>
+              <td class = "dbteksts">{{ task.ražošanasGads }}</td>
+              <td class = "dbteksts">{{ task.vietuSkaits }}</td>
+              <td class = "dbteksts">{{ task.date_created.date() }}</td>
+              <td>
+                <a href="/delete/{{task.id}}"><button id = dzest>Delete</button></a>
+                <br>
+                <a id = labot href="/update/{{task.id}}"><button id = labot>Update</button></a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+        <form action="/admin/lidostas" method="POST" id = "form">
+          <dropdown>
+          <input class = "input" type="text" name="modelis" id="modelis" maxlength="50">
+          <input class = "input" type="text" name="ražošanasGads" id="ražošanasGads" maxlength="3">
+          <input class = "input" type="text" name="vietuSkaits" id="vietuSkaits" maxlength="3">
+          <input type="submit" value="Pievienot" id="pievienot">
+        </form>
+    </div>
       </div>
-    </div>
-    <div id="popUp3">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tIzveletiesLidostu" id="apaksvirsraksti">Lidosta</h3>
-          <input type="text" id="input" class="izveletiesLidostu"/>
-          <h3 class="tPievienotModeli" id="apaksvirsraksti">Modelis</h3>
-          <input type="text" id="input" class="pievienotModeli"/>
-          <h3 class="tPievienotRazosanasGads" id="apaksvirsraksti">Ražošanas gads</h3>
-          <input type="text" id="input" class="pievienotRazosanasGads"/>
-          <h3 class="tPievienotVietuSkaits" id="apaksvirsraksti">Vietu Skaits</h3>
-          <input type="text" id="input" class="pievienotVietuSkaits"/>
-          <button type="submit" id="pievienotLidmasinasPoga" class="dzeltenaPoga">Pievienot</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
-      </form>
-    </div>
-    <div id="popUp4">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tLabotLidmasinas" id="apaksvirsraksti">Lidosta</h3>
-          <input type="text" id="input" class="labotLidmasinas"/>
-          <h3 class="tLabotModeli" id="apaksvirsraksti">Modelis</h3>
-          <input type="text" id="input" class="labotModeli"/>
-          <h3 class="tLabotRazosanasGads" id="apaksvirsraksti">Ražošanas gads</h3>
-          <input type="text" id="input" class="labotRazosanasGads"/>
-          <h3 class="tLabotVietuSkaits" id="apaksvirsraksti">Vietu Skaits</h3>
-          <input type="text" id="input" class="labotVietuSkaits"/>
-          <button type="submit" id="labotLidmasinasPoga" class="dzeltenaPoga">Labot</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
-      </form>
-    </div>
-    <div id="popUp5">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tIzveletiesLidostu" id="apaksvirsraksti">Lidosta</h3>
-          <input type="text" id="input" class="izveletiesLidostu"/>
-          <h3 class="tIzveletiesModeli" id="apaksvirsraksti">Modelis</h3>
-          <input type="text" id="input" class="izveletiesModeli"/>
-          <button type="submit" id="dzestLidmasinasPoga" class="dzeltenaPoga">Dzēst</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
-      </form>
-    </div>
     <script src="/static/js/adminlidmasinas.js"></script>
   </body>
 </html>
