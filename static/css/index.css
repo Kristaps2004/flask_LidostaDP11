@@ -352,6 +352,7 @@ span {
   box-sizing: border-box;
   border-radius: 20px;
   overflow: hidden;
+  user-select: none;
 }
 
 .carousel-slide,

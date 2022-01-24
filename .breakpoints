@@ -1,10 +1,18 @@
 {
   "files": {
+    "static/css/adminlidostas.css": [
+      {
+        "id": "cbd4772d-e67d-4c76-9039-b4813c2abc7a",
+        "line": 22,
+        "version": 162,
+        "index": 327
+      }
+    ],
     "static/css/index.css": [
       {
         "id": "dc792388-91ee-4af7-a42e-fa5ebaa2f1eb",
         "line": 56,
-        "version": 514,
+        "version": 516,
         "index": 914
       }
     ]

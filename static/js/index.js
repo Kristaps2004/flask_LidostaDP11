@@ -106,3 +106,6 @@ carouselSlide2.addEventListener("transitionend", () => {
         carouselSlide2.style.transform = "translateX(" + -size2 * counter2 + "px)";
     }
 });
+
+//Hide date back
+
