@@ -9,48 +9,48 @@
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
   <body>
-    <div class="augsejaisBaneris">
+    <div id = "augsejaisBaneris">
       <a href="/">
-        <h1 class="virsraksts">OrmondAir</h1>
+        <h1 id = "homePage">OrmondAir</h1>
       </a>
       <a href="/admin">
         <button id="atgriezties_admin">Atgriezties admin</button>
       </a>
     </div>
-    <div class="apaksejaisBaneris">
-      <div class="content">
-        <h1>Task Master</h1>
+    <div id = "apaksejaisBaneris">
+      <div class = "tabula">
+        <h1 id = "virsraksts">Lidostas</h1>
         {% if tasks|length < 1 %}
-        <h4>Nav pievienota neviena lidosta! </h4>
+        <h4 id = "apaksraksts">Nav pievienota neviena lidosta! </h4>
         {% else %}
         <table>
            <tr>
-            <th>Lidostas nosaukums</th>
-            <th>Saīsinājums</th>
-            <th>Adrese</th>
-            <th>Pievienošanas datums</th>
-            <th>Darbības</th>
+            <th class = "teksts">Lidostas nosaukums</th>
+            <th class = "teksts">Saīsinājums</th>
+            <th class = "teksts">Adrese</th>
+            <th class = "teksts">Pievienošanas datums</th>
+            <th class = "teksts">Darbības</th>
           </tr>
           {% for task in tasks %}
             <tr>
-              <td>{{ task.content }}</td>
-              <td>{{ task.saisinajums }}</td>
-              <td>{{ task.adrese }}</td>
-              <td>{{ task.date_created.date() }}</td>
+              <td class = "dbteksts">{{ task.content }}</td>
+              <td class = "dbteksts">{{ task.saisinajums }}</td>
+              <td class = "dbteksts">{{ task.adrese }}</td>
+              <td class = "dbteksts">{{ task.date_created.date() }}</td>
               <td>
-                <a href="/delete/{{task.id}}">Delete</a>
+                <a href="/delete/{{task.id}}"><button id = dzest>Delete</button></a>
                 <br>
-                <a href="/update/{{task.id}}">Update</a>
+                <a id = labot href="/update/{{task.id}}"><button id = labot>Update</button></a>
               </td>
             </tr>
           {% endfor %}
         </table>
         {% endif %}
-        <form action="/admin/lidostas" method="POST">
-          <input type="text" name="content" id="content">
-          <input type="text" name="saisinajums" id="saisinajums">
-          <input type="text" name="adrese" id="adrese">
-          <input type="submit" value="Pievienot">
+        <form action="/admin/lidostas" method="POST" id = "form">
+          <input class = input type="text" name="content" id="content" maxlength="50">
+          <input class = input type="text" name="saisinajums" id="saisinajums" maxlength="3">
+          <input class = input type="text" name="adrese" id="adrese" maxlength="50">
+          <input type="submit" value="Pievienot" id="pievienot">
         </form>
     </div>
     </div>

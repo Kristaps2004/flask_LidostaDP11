@@ -10,7 +10,7 @@
   src: url("../fonts/post-no-bills-colombo.medium.ttf");
 }
 
-.augsejaisBaneris {
+#augsejaisBaneris {
   position: absolute;
   left: 0%;
   right: 0%;
@@ -19,7 +19,7 @@
   background: #073590;
 }
 
-.virsraksts {
+#homePage {
   position: absolute;
   left: 0%;
   font-family: Post No Bills Colombo Medium;
@@ -30,7 +30,7 @@
   user-select: none;
 }
 
-.apaksejaisBaneris {
+#apaksejaisBaneris {
   position: absolute;
   left: 0%;
   right: 0%;
@@ -52,4 +52,86 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   cursor: pointer;
+}
+
+#pievienot{
+  position: absolute;
+  width: 154px;
+  height: 48px;
+  background: #f1c933;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.teksts{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #000000;
+  padding-right: 30px;
+}
+
+.input{
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 300px;
+  height: 30px;
+}
+
+#dzest{
+  width: 100px;
+  height: 30px;
+  background: #FF0000;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-top: 10px;
+}
+
+#labot{
+  width: 100px;
+  height: 30px;
+  background: #ababab;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.dbteksts{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+#virsraksts{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  color: #000000;
+}
+
+#apaksraksts{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #000000;
+}
+
+.tabula{
+  
+}
+
+#form{
+  text-align:center;
 }
