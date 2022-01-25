@@ -9,19 +9,24 @@ db = SQLAlchemy(app)
 
 class Lidosta(db.Model):
   id = db.Column(db.Integer, primary_key = True)
-  content = db.Column(db.String(200), nullable = False)
-  saisinajums = db.Column(db.String(3), nullable = False)
-  adrese = db.Column(db.String(200), nullable = False)
+  content = db.Column(db.String(200), nullable=False)
+  saisinajums = db.Column(db.String(3), nullable=False)
+  adrese = db.Column(db.String(200), nullable=False)
   date_created = db.Column(db.DateTime, default = datetime.utcnow)
+
+  def __repr__(self):
+    return 'Task %r' %self.id
 
 class Lidmasina(db.Model):
   id = db.Column(db.Integer, primary_key = True)
   modelis = db.Column(db.String(200), nullable = False)
-  ražošanasGads = db.Column(db.String(3), nullable = False)
-  vietuSkaits = db.Column(db.String(200), nullable = False)
+  razosanas_gads = db.Column(db.String(3), nullable = False)
+  vietu_skaits = db.Column(db.String(200), nullable = False)
+  date_created1 = db.Column(db.DateTime, default = datetime.utcnow)
+
+  def __repr__(self):
+    return 'Lidmasina %r' %self.id
   
-def __repr__(self):
-  return 'Task %r' %self.id
 
 @app.route('/')
 def index():
@@ -43,14 +48,27 @@ def rezervacijas():
 def statistika():
   return render_template("statistika.html")
 
-@app.route('/admin/lidmasinas')
-def lidmasinas():
-  return render_template("adminlidmasinas.html")
+@app.route('/admin/lidmasinas', methods=['POST', 'GET'])
+def lidmasina():
+  if request.method == 'POST':
+    new_lidmasina = Lidmasina(modelis=request.form['modelis'],razosanas_gads = request.form['razosanas_gads'], vietu_skaits=request.form['vietu_skaits'])
+  
+    try:
+        db.session.add(new_lidmasina)
+        db.session.commit()
+
+        return redirect('/admin/lidmasinas')
+    except:
+        return "Draugi nav labi!"
+
+  else:
+    tasks = Lidmasina.query.order_by(Lidmasina.date_created1).all()
+    return render_template('adminlidmasinas.html',tasks = tasks)
 
 @app.route('/admin/lidostas', methods=['POST', 'GET'])
 def lidostas():
   if request.method == 'POST':
-    new_airport = Lidosta(content=request.form['content'],saisinajums = request.form['saisinajums'], adrese =request.form['adrese'])
+    new_airport = Lidosta(content=request.form['content'],saisinajums = request.form['saisinajums'], adrese=request.form['adrese'])
 
     try:
       db.session.add(new_airport)

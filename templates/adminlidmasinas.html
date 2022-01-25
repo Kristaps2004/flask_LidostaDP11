@@ -18,9 +18,9 @@
       </a>
     </div>
       <div class="apaksejaisBaneris">
-        <div class = "tabula">
+        <div class = "task">
         <h1 id = "virsraksts">Lidmašīnas</h1>
-        {% if tasks|length < 1 %}
+        {% if taks|length < 1 %}
         <h4 id = "apaksraksts">Nav pievienota neviena lidmašīna! </h4>
         {% else %}
         <table>
@@ -32,12 +32,12 @@
             <th class = "teksts">Pievienošanas datums</th>
             <th class = "teksts">Darbības</th>
           </tr>
-          {% for task in tasks %}
+          {% for task in taks %}
             <tr>
               <td class = "dbteksts">{{ task.content }}</td>
               <td class = "dbteksts">{{ task.modelis }}</td>
-              <td class = "dbteksts">{{ task.ražošanasGads }}</td>
-              <td class = "dbteksts">{{ task.vietuSkaits }}</td>
+              <td class = "dbteksts">{{ task.razosanas_gads }}</td>
+              <td class = "dbteksts">{{ task.vietu_skaits }}</td>
               <td class = "dbteksts">{{ task.date_created.date() }}</td>
               <td>
                 <a href="/delete/{{task.id}}"><button id = dzest>Delete</button></a>
@@ -51,8 +51,8 @@
         <form action="/admin/lidostas" method="POST" id = "form">
           <dropdown>
           <input class = "input" type="text" name="modelis" id="modelis" maxlength="50">
-          <input class = "input" type="text" name="ražošanasGads" id="ražošanasGads" maxlength="3">
-          <input class = "input" type="text" name="vietuSkaits" id="vietuSkaits" maxlength="3">
+          <input class = "input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="3">
+          <input class = "input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="3">
           <input type="submit" value="Pievienot" id="pievienot">
         </form>
     </div>
