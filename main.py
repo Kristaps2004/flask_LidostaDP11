@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from sqlalchemy import desc
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
@@ -16,7 +17,7 @@ class Lidosta(db.Model):
 
   def __repr__(self):
     return 'Task %r' %self.id
-
+"""Principā šī datubāzes daļa nestrādā nezināmu iemeslu pēc """
 class Lidmasina(db.Model):
   id = db.Column(db.Integer, primary_key = True)
   modelis = db.Column(db.String(200), nullable = False)
@@ -62,7 +63,7 @@ def lidmasina():
         return "Draugi nav labi!"
 
   else:
-    tasks = Lidmasina.query.order_by(Lidmasina.date_created1).all()
+    tasks = Lidmasina.query.order_by(desc(Lidmasina.date_created1)).all()
     return render_template('adminlidmasinas.html',tasks = tasks)
 
 @app.route('/admin/lidostas', methods=['POST', 'GET'])
