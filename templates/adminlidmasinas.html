@@ -9,54 +9,52 @@
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
   <body>
-    <div id = "augsejaisBaneris">
-      <a href = "/">
-        <h1 id="homePage">OrmondAir</h1>
+    <div class="augsejaisBaneris">
+      <a href="/">
+        <h1 class="homePage">OrmondAir</h1>
       </a>
-      <a href = "/admin">
+      <a href="/admin">
         <button id="atgriezties_admin">Atgriezties admin</button>
       </a>
     </div>
-    <div id="apaksejaisBaneris">
-      <div class = "task">
-      <h1 id = "virsraksts">Lidmašīnas</h1>
+    <div class="apaksejaisBaneris">
+      <h1 id="virsraksts">Lidmašīnas</h1>
       {% if tasks|length < 1 %}
-      <h4 id = "apaksraksts">Nav pievienota neviena lidmašīna! </h4>
+      <h4 id="apaksraksts">Nav pievienota neviena lidmašīna! </h4>
       {% else %}
-      <table class = "tabula">
-         <tr class = "tabula">
-          <th class = "teksts">Lidosta</th>
-          <th class = "teksts">Modelis</th>
-          <th class = "teksts">Ražošanas gads</th>
-          <th class = "teksts">Vietu skaits</th>
-          <th class = "teksts">Pievienošanas datums</th>
-          <th class = "teksts">Darbības</th>
+      <table class="tabula">
+         <tr class="tabula">
+          <th class="teksts">Lidosta</th>
+          <th class="teksts">Modelis</th>
+          <th class="teksts">Ražošanas gads</th>
+          <th class="teksts">Vietu skaits</th>
+          <th class="teksts">Pievienošanas datums</th>
+          <th class="teksts">Darbības</th>
         </tr>
         {% for task in tasks %}
-          <tr class = "tabula">
-            <td class = "dbteksts">{{ task.content }}</td>
-            <td class = "dbteksts">{{ task.modelis }}</td>
-            <td class = "dbteksts">{{ task.razosanas_gads }}</td>
-            <td class = "dbteksts">{{ task.vietu_skaits }}</td>
-            <td class = "dbteksts">{{ task.date_created.date() }}</td>
+          <tr class="tabula">
+            <td class="dbteksts">{{ task.content }}</td>
+            <td class="dbteksts">{{ task.modelis }}</td>
+            <td class="dbteksts">{{ task.razosanas_gads }}</td>
+            <td class="dbteksts">{{ task.vietu_skaits }}</td>
+            <td class="dbteksts">{{ task.date_created.date() }}</td>
             <td>
-              <a href="/delete_airplane/{{task.id}}"><button id = dzest>Delete</button></a>
+              <a href="/delete_airplane/{{task.id}}"><button id=dzest>Delete</button></a>
                 <br>
-              <a href="/update_lidmasinas/{{task.id}}"><button id = labot>Update</button></a>
+              <a href="/update_lidmasinas/{{task.id}}"><button id=labot>Update</button></a>
             </td>
           </tr>
         {% endfor %}
       </table>
       {% endif %}
-      <form action="/admin/lidmasinas" method="POST" id = "form">
+      <form action="/admin/lidmasinas" method="POST" id="form">
         <dropdown>
-        <input class = "input" type="text" name="modelis" id="modelis" maxlength="50">
-        <input class = "input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="3">
-        <input class = "input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="3">
+        <input class="input" type="text" name="modelis" id="modelis" maxlength="50" required>
+        <input class="input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="4" required>
+        <input class="input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="4" required>
         <input type="submit" value="Pievienot" id="pievienot">
       </form>
     </div>
-      </div>
     <script src="/static/js/adminlidmasinas.js"></script>
   </body>
 </html>

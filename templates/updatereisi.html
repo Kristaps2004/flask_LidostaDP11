@@ -16,10 +16,9 @@
     </div>
     <div class="apaksejaisBaneris">
       <h1 id="virsraksts">Veikt Labojumus</h1>
-      <form action="/update_lidmasinas/{{task.id}}" method="POST" id="form">
-        <input class="input" maxlength="50" type="text" name="modelis" id="modelis" value="{{task.modelis}}" required>
-        <input class="input" maxlength="4" type="text" name="razosanas_gads" id="razosanas_gads" value="{{task.razosanas_gads}}" required>
-        <input class="input" maxlength="4" type="text" name="vietu_skaits" id="vietu_skaits" value="{{task.vietu_skaits}}" required>
+      <form action="/update_reisi/{{task.id}}" method="POST" id="form">
+        <input type="date" min="date" type="text" name="datums" id="datums" value="{{task.datums}}" required>
+        <input type="time" type="text" name="laiks" id="laiks" value="{{task.laiks}}" required>
         <input type="submit" value="Update" id="pievienot">
       </form>
     </div>

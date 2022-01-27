@@ -29,6 +29,15 @@ class Lidmasina(db.Model):
     def __repr__(self):
         return 'Lidmasina %r' % self.id
 
+class Reis(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    datums = db.Column(db.String(200), nullable=False)
+    laiks = db.Column(db.String(200), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return 'Reis %r' % self.id
+
 
 @app.route('/')
 def index():
@@ -135,10 +144,44 @@ def update(id):
     else:
         return render_template("update.html", task=task)
 
+#Reisu lapa
+@app.route('/admin/reisi', methods=['POST', 'GET'])
+def reis():
+  if request.method == 'POST':
+    new_reis = Reis(datums=request.form['datums'],laiks = request.form['laiks'])
+    try:
+      db.session.add(new_reis)
+      db.session.commit()
+      return redirect('/admin/reisi')
+    except:
+      return "Draugi nav labi!"
+  else:
+      tasks = Reis.query.order_by(Reis.date_created).all()
+      return render_template("adminreisi.html", tasks=tasks)
 
-@app.route('/admin/reisi')
-def reisi():
-    return render_template("adminreisi.html")
+@app.route('/delete_reisi/<int:id>')
+def delete_reisi(id):
+    task_to_delete = Reis.query.get_or_404(id)
+    try:
+        db.session.delete(task_to_delete)
+        db.session.commit()
+        return redirect('/admin/reisi')
+    except:
+        return 'Brāl nesanāca izdzēst'
+
+@app.route('/update_reisi/<int:id>', methods=['GET', 'POST'])
+def update_reisi(id):
+    task = Reis.query.get_or_404(id)
+    if request.method == 'POST':
+        task.datums = request.form['datums']
+        task.laiks = request.form['laiks']
+        try:
+            db.session.commit()
+            return redirect('/admin/reisi')
+        except:
+            return "Brāl nesanāca update"
+    else:
+        return render_template("updatereisi.html", task=task)
 
 if __name__ == "__main__": 
   app.run(host='0.0.0.0', port=8000)

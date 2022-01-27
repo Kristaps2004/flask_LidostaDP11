@@ -14,7 +14,7 @@ body {
   src: url("../fonts/post-no-bills-colombo.medium.ttf");
 }
 
-#augsejaisBaneris {
+.augsejaisBaneris {
   position: absolute;
   left: 0%;
   right: 0%;
@@ -23,7 +23,7 @@ body {
   background: #073590;
 }
 
-#homePage {
+.homePage {
   position: absolute;
   left: 0%;
   font-family: Post No Bills Colombo Medium;
@@ -34,7 +34,7 @@ body {
   user-select: none;
 }
 
-#apaksejaisBaneris {
+.apaksejaisBaneris {
   position: absolute;
   top: 15.72%;
   right: 0px;

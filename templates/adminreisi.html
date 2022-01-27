@@ -4,80 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/static/css/adminreisi.css" rel="stylesheet" />
+    <link href="/static/css/stylesheet.css" rel="stylesheet" />
     <title>OrmondAir: Admin Reisi</title>
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
   <body>
     <div class="augsejaisBaneris">
       <a href="/">
-        <h1 class="virsraksts">OrmondAir</h1>
+        <h1 class="homePage">OrmondAir</h1>
       </a>
       <a href="/admin">
         <button id="atgriezties_admin">Atgriezties admin</button>
       </a>
     </div>
     <div class="apaksejaisBaneris">
-      <div class="reisi">
-        <h2 class="nosaukumi">Reisi</h2>
-        <button id="pievienotReisi">Pievienot</button>
-        <button id="labotReisi">Labot</button>
-        <button id="dzestReisi">Dzēst</button>
-      </div>
-    </div>
-    <div id="popUp6">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tPievienotIzlidosanasDatumu" id="apaksvirsraksti">Izlidošanas datums</h3>
-          <input type="text" id="input" class="pievienotIzlidosanasDatumu"/>
-          <h3 class="tPievienotLaiku" id="apaksvirsraksti">Laiks</h3>
-          <input type="text" id="input" class="pievienotLaiku"/>
-          <h3 class="tPievienotNo" id="apaksvirsraksti">No</h3>
-          <input type="text" id="inputMazais" class="pievienotNo"/>
-          <h3 class="tPievienotUz" id="apaksvirsraksti">Uz</h3>
-          <input type="text" id="inputMazais" class="pievienotUz"/>
-          <button type="submit" id="pievienotReisiPoga" class="dzeltenaPoga">Pievienot</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
+      <h1 id="virsraksts">Reisi</h1>
+      {% if tasks|length < 1 %}
+      <h4 id="apaksraksts">Nav pievienots neviens reis! </h4>
+      {% else %}
+      <table class="tabula">
+        <tr class="tabula">
+          <th class="teksts">Izlidošanas datums</th>
+          <th class="teksts">Laiks</th>
+          <th class="teksts">No</th>
+          <th class="teksts">Uz</th>
+          <th class="teksts">Pievienošanas datums</th>
+          <th class="teksts">Darbības</th>
+        </tr>
+        {% for task in tasks %}
+          <tr class="tabula">
+            <td class="dbteksts">{{ task.datums }}</td>
+            <td class="dbteksts">{{ task.laiks }}</td>
+            <td class="dbteksts">{{ task.content }}</td>
+            <td class="dbteksts">{{ task.content }}</td>
+            <td class="dbteksts">{{ task.date_created.date() }}</td>
+            <td>
+              <a href="/delete_reisi/{{task.id}}"><button id=dzest>Delete</button></a>
+              <br>
+              <a href="/update_reisi/{{task.id}}"><button id=labot>Update</button></a>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+      <form action="/admin/reisi" method="POST" id="form">
+        <input type="date" min="date" type="text" name="datums" id="datums" placeholder="datums" required>
+        <input type="time" type="text" name="laiks" id="laiks" placeholder="laiks" required>
+        <input type="submit" value="Pievienot" id="pievienot">
       </form>
-    </div>
-    <div id="popUp7">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tIzveletiesReisaNumuru" id="apaksvirsraksti">Reisa Numurs</h3>
-          <input type="text" id="input" class="izveletiesReisaNumuru"/>
-          <h3 class="tLabotIzlidosanasDatumu" id="apaksvirsraksti">Izlidošanas datums</h3>
-          <input type="text" id="input" class="labotIzlidosanasDatumu"/>
-          <h3 class="tLabotLaiku" id="apaksvirsraksti">Laiks</h3>
-          <input type="text" id="input" class="labotLaiku"/>
-          <h3 class="tLabotNo" id="apaksvirsraksti">No</h3>
-          <input type="text" id="inputMazais" class="labotNo"/>
-          <h3 class="tLabotUz" id="apaksvirsraksti">Uz</h3>
-          <input type="text" id="inputMazais" class="labotUz"/>
-          <button type="submit" id="labotReisiPoga" class="dzeltenaPoga">Labot</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
-      </form>
-    </div>
-    <div id="popUp8">
-      <form id="form">
-        <div class="miniapaksa">
-          <div class="miniAugsa">
-            <h2 id="miniVirsraksts">OrmondAir</h2>
-          </div>
-          <h3 class="tDzestReisu" id="apaksvirsraksti">Reisa Numurs</h3>
-          <input type="text" id="input" class="dzestReisu"/>
-          <button type="submit" id="dzestReisiPoga" class="dzeltenaPoga">Dzēst</button>
-          <button id="atcelt" class="atceltLielakaDala">Atcelt</button>
-        </div>
-      </form>
-    </div>
     <script src="/static/js/adminreisi.js"></script>
   </body>
 </html>
