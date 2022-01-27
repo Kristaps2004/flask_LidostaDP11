@@ -23,13 +23,6 @@
       {% if tasks|length < 1 %}
       <h4 id = "apaksraksts">Nav pievienota neviena lidmašīna! </h4>
       {% else %}
-      <form action="/admin/lidmasinas" method="POST" id = "form">
-        <dropdown>
-        <input class = "input" type="text" name="modelis" id="modelis" maxlength="50">
-        <input class = "input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="3">
-        <input class = "input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="3">
-        <input type="submit" value="Pievienot" id="pievienot">
-      </form>
       <table class = "tabula">
          <tr class = "tabula">
           <th class = "teksts">Lidosta</th>
@@ -47,14 +40,21 @@
             <td class = "dbteksts">{{ task.vietu_skaits }}</td>
             <td class = "dbteksts">{{ task.date_created.date() }}</td>
             <td>
-              <a href="/delete_airport/{{task.id}}"><button id = dzest>Delete</button></a>
+              <a href="/delete_airplane/{{task.id}}"><button id = dzest>Delete</button></a>
                 <br>
-              <a href="/update/{{task.id}}"><button id = labot>Update</button></a>
+              <a href="/update_lidmasinas/{{task.id}}"><button id = labot>Update</button></a>
             </td>
           </tr>
         {% endfor %}
       </table>
       {% endif %}
+      <form action="/admin/lidmasinas" method="POST" id = "form">
+        <dropdown>
+        <input class = "input" type="text" name="modelis" id="modelis" maxlength="50">
+        <input class = "input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="3">
+        <input class = "input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="3">
+        <input type="submit" value="Pievienot" id="pievienot">
+      </form>
     </div>
       </div>
     <script src="/static/js/adminlidmasinas.js"></script>

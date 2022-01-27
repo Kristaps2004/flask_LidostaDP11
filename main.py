@@ -2,23 +2,11 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import desc
-from flask_migrate import Migrate
-from sqlalchemy import MetaData
 
-convention = {
-    "ix": 'ix_%(column_0_label)s',
-    "uq": "uq_%(table_name)s_%(column_0_name)s",
-    "ck": "ck_%(table_name)s_%(constraint_name)s",
-    "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
-    "pk": "pk_%(table_name)s"
-}
-_metadata = MetaData(naming_convention=convention)
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-db = SQLAlchemy(app, metadata=_metadata)
-migrate = Migrate(app, db, render_as_batch=True)
-
+db = SQLAlchemy(app)
 
 class Lidosta(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -66,28 +54,63 @@ def rezervacijas():
 def statistika():
     return render_template("statistika.html")
 
-
+#Lidmasinas lapa
 @app.route('/admin/lidmasinas', methods=['POST', 'GET'])
 def lidmasina():
     if request.method == 'POST':
-        new_lidmasina = Lidmasina(
-            modelis=request.form['modelis'], razosanas_gads=request.form['razosanas_gads'], vietu_skaits=request.form['vietu_skaits'])
+      new_lidmasina = Lidmasina(modelis=request.form['modelis'], razosanas_gads=request.form['razosanas_gads'], vietu_skaits=request.form['vietu_skaits'])
+      try:
         db.session.add(new_lidmasina)
         db.session.commit()
-    return render_template('adminlidmasinas.html', tasks=Lidmasina.query.all())
+        return redirect('/admin/lidmasinas')
+      except:
+        return "Draugi nav labi!"
+    else:
+      tasks = Lidmasina.query.order_by(Lidmasina.date_created).all()
+      return render_template('adminlidmasinas.html', tasks=tasks)
 
-
-@ app.route('/admin/lidostas', methods=['POST', 'GET'])
-def lidostas():
-    if request.method == 'POST':
-        new_airport = Lidosta(
-            content=request.form['content'], saisinajums=request.form['saisinajums'], adrese=request.form['adrese'])
-        db.session.add(new_airport)
+@app.route('/delete_airplane/<int:id>')
+def delete_plane(id):
+    task_to_delete = Lidmasina.query.get_or_404(id)
+    try:
+        db.session.delete(task_to_delete)
         db.session.commit()
-    return render_template('adminlidostas.html', tasks=Lidosta.query.all())
+        return redirect('/admin/lidmasinas')
+    except:
+        return 'Brāl nesanāca izdzēst'
+
+@app.route('/update_lidmasinas/<int:id>', methods=['GET', 'POST'])
+def update_lidmasinas(id):
+    task = Lidmasina.query.get_or_404(id)
+    if request.method == 'POST':
+      task.modelis = request.form['modelis']
+      task.razosanas_gads = request.form['razosanas_gads']
+      task.vietu_skaits = request.form['vietu_skaits']
+      try:
+        db.session.commit()
+        return redirect('/admin/lidmasinas')
+      except:
+        return "Brāl nesanāca update"
+    else:
+        return render_template("updatelidmasinas.html", task=task)
+
+#Lidostas lapa
+@app.route('/admin/lidostas', methods=['POST', 'GET'])
+def lidostas():
+  if request.method == 'POST':
+    new_airport = Lidosta(content=request.form['content'],saisinajums = request.form['saisinajums'], adrese=request.form['adrese'])
+    try:
+      db.session.add(new_airport)
+      db.session.commit()
+      return redirect('/admin/lidostas')
+    except:
+      return "Draugi nav labi!"
+  else:
+    tasks = Lidosta.query.order_by(Lidosta.date_created).all()
+    return render_template('adminlidostas.html', tasks=tasks)
 
 
-@ app.route('/delete/<int:id>')
+@app.route('/delete/<int:id>')
 def delete(id):
     task_to_delete = Lidosta.query.get_or_404(id)
     try:
@@ -97,24 +120,13 @@ def delete(id):
     except:
         return 'Brāl nesanāca izdzēst'
 
-
-@app.route('/delete_airport/<int:id>')
-def delete_plane(id):
-    remove_planes = Lidmasina.query.filter_by(id=id).first()
-    db.session.delete(remove_planes)
-    db.session.commit()
-    return redirect(url_for('adminlidmasinas'))
-
-
-@ app.route('/update/<int:id>', methods=['GET', 'POST'])
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
     task = Lidosta.query.get_or_404(id)
-
     if request.method == 'POST':
         task.content = request.form['content']
         task.saisinajums = request.form['saisinajums']
         task.adrese = request.form['adrese']
-
         try:
             db.session.commit()
             return redirect('/admin/lidostas')
@@ -124,8 +136,9 @@ def update(id):
         return render_template("update.html", task=task)
 
 
-@ app.route('/admin/reisi')
+@app.route('/admin/reisi')
 def reisi():
     return render_template("adminreisi.html")
 
-    app.run(host='0.0.0.0', port=8000)
+if __name__ == "__main__": 
+  app.run(host='0.0.0.0', port=8000)

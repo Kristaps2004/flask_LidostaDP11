@@ -17,10 +17,10 @@
     <div id="apaksejaisBaneris">
       <div class="content">
         <h1 id = "virsraksts">Veikt Labojumus</h1>
-        <form action="/update/{{task.id}}" method="POST" id = "form">
-          <input class = "input" type="text" name="content" id="content" value="{{task.content}}" required>
-          <input class = "input" type="text" name="saisinajums" id="saisinajums" value="{{task.saisinajums}}" required>
-          <input class = "input" type="text" name="adrese" id="adrese" value="{{task.adrese}}" required>
+        <form action="/update_lidmasinas/{{task.id}}" method="POST" id = "form">
+          <input class = "input" type="text" name="modelis" id="modelis" value="{{task.modelis}}" required>
+          <input class = "input" type="text" name="razosanas_gads" id="razosanas_gads" value="{{task.razosanas_gads}}" required>
+          <input class = "input" type="text" name="vietu_skaits" id="vietu_skaits" value="{{task.vietu_skaits}}" required>
           <input type="submit" value="Update" id="pievienot">
         </form>
     </div>
