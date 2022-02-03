@@ -48,10 +48,14 @@
       </table>
       {% endif %}
       <form action="/admin/lidmasinas" method="POST" id="form">
-        <dropdown>
-        <input class="input" type="text" name="modelis" id="modelis" maxlength="50" required>
-        <input class="input" type="text" name="razosanas_gads" id="razosanas_gads" maxlength="4" required>
-        <input class="input" type="text" name="vietu_skaits" id="vietu_skaits" maxlength="4" required>
+        <select class="input" name="content" id="content" method="POST">
+          {% for lidosta in lidostas %}
+            <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
+          {% endfor %}
+        </select>
+        <input class="input" type="text" placeholder="Modelis" name="modelis" id="modelis" maxlength="50" required>
+        <input class="input" type="text" placeholder="Ražošanas Gads" name="razosanas_gads" id="razosanas_gads" maxlength="4" required>
+        <input class="input" type="text" placeholder="Vietu skaits" name="vietu_skaits" id="vietu_skaits" maxlength="4" required>
         <input type="submit" value="Pievienot" id="pievienot">
       </form>
     </div>

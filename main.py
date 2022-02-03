@@ -21,6 +21,7 @@ class Lidosta(db.Model):
 
 class Lidmasina(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
     modelis = db.Column(db.String(200), nullable=False)
     razosanas_gads = db.Column(db.String(3), nullable=False)
     vietu_skaits = db.Column(db.String(200), nullable=False)
@@ -67,7 +68,7 @@ def statistika():
 @app.route('/admin/lidmasinas', methods=['POST', 'GET'])
 def lidmasina():
     if request.method == 'POST':
-      new_lidmasina = Lidmasina(modelis=request.form['modelis'], razosanas_gads=request.form['razosanas_gads'], vietu_skaits=request.form['vietu_skaits'])
+      new_lidmasina = Lidmasina(content=request.form['content'],modelis=request.form['modelis'], razosanas_gads=request.form['razosanas_gads'], vietu_skaits=request.form['vietu_skaits'])
       try:
         db.session.add(new_lidmasina)
         db.session.commit()
@@ -75,8 +76,9 @@ def lidmasina():
       except:
         return "Draugi nav labi!"
     else:
+      lidostas = Lidosta.query.order_by(Lidosta.id).all()
       tasks = Lidmasina.query.order_by(Lidmasina.date_created).all()
-      return render_template('adminlidmasinas.html', tasks=tasks)
+      return render_template('adminlidmasinas.html', tasks=tasks, lidostas = lidostas)
 
 @app.route('/delete_airplane/<int:id>')
 def delete_plane(id):
@@ -92,6 +94,7 @@ def delete_plane(id):
 def update_lidmasinas(id):
     task = Lidmasina.query.get_or_404(id)
     if request.method == 'POST':
+      task.content = request.form['content']
       task.modelis = request.form['modelis']
       task.razosanas_gads = request.form['razosanas_gads']
       task.vietu_skaits = request.form['vietu_skaits']
@@ -158,7 +161,6 @@ def reis():
   else:
       tasks = Reis.query.order_by(Reis.date_created).all()
       return render_template("adminreisi.html", tasks=tasks)
-
 @app.route('/delete_reisi/<int:id>')
 def delete_reisi(id):
     task_to_delete = Reis.query.get_or_404(id)
