@@ -17,8 +17,18 @@
     <div class="apaksejaisBaneris">
       <h1 id="virsraksts">Veikt Labojumus</h1>
       <form action="/update_reisi/{{task.id}}" method="POST" id="form">
-        <input type="date" min="date" type="text" name="datums" id="datums" value="{{task.datums}}" required>
-        <input type="time" type="text" name="laiks" id="laiks" value="{{task.laiks}}" required>
+        <input class="input" type="date" min="date" type="text" name="datums" id="datums" value="{{task.datums}}" required>
+        <input class="input" type="time" type="text" name="laiks" id="laiks" value="{{task.laiks}}" required>
+        <select class="input" name="nolidostas" id="nolidostas" method="POST">
+          {% for lidosta in lidostas %}
+            <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
+          {% endfor %}
+        </select>
+        <select class="input" name="uzlidostas" id="uzlidostas" method="POST">
+          {% for lidosta in lidostas %}
+            <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
+          {% endfor %}
+        </select>
         <input type="submit" value="Update" id="pievienot">
       </form>
     </div>

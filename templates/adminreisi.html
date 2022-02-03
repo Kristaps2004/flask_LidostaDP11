@@ -20,7 +20,7 @@
     <div class="apaksejaisBaneris">
       <h1 id="virsraksts">Reisi</h1>
       {% if tasks|length < 1 %}
-      <h4 id="apaksraksts">Nav pievienots neviens reis! </h4>
+      <h4 id="apaksraksts">Nav pievienots neviens reiss! </h4>
       {% else %}
       <table class="tabula">
         <tr class="tabula">
@@ -35,8 +35,8 @@
           <tr class="tabula">
             <td class="dbteksts">{{ task.datums }}</td>
             <td class="dbteksts">{{ task.laiks }}</td>
-            <td class="dbteksts">{{ task.content }}</td>
-            <td class="dbteksts">{{ task.content }}</td>
+            <td class="dbteksts">{{ task.nolidostas }}</td>
+            <td class="dbteksts">{{ task.uzlidostas }}</td>
             <td class="dbteksts">{{ task.date_created.date() }}</td>
             <td>
               <a href="/delete_reisi/{{task.id}}"><button id=dzest>Delete</button></a>
@@ -50,6 +50,16 @@
       <form action="/admin/reisi" method="POST" id="form">
         <input class="input" type="date" min="date" type="text" name="datums" id="datums" placeholder="datums" required>
         <input class="input" type="time" type="text" name="laiks" id="laiks" placeholder="laiks" required>
+        <select class="input" name="nolidostas" id="nolidostas" method="POST">
+          {% for lidosta in lidostas %}
+            <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
+          {% endfor %}
+        </select>
+        <select class="input" name="uzlidostas" id="uzlidostas" method="POST">
+          {% for lidosta in lidostas %}
+            <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
+          {% endfor %}
+        </select>
         <input type="submit" value="Pievienot" id="pievienot">
       </form>
     <script src="/static/js/adminreisi.js"></script>

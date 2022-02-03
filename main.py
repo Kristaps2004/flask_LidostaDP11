@@ -34,6 +34,8 @@ class Reis(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     datums = db.Column(db.String(200), nullable=False)
     laiks = db.Column(db.String(200), nullable=False)
+    nolidostas = db.Column(db.String(200), nullable=False)
+    uzlidostas = db.Column(db.String(200), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
@@ -104,7 +106,8 @@ def update_lidmasinas(id):
       except:
         return "Brāl nesanāca update"
     else:
-        return render_template("updatelidmasinas.html", task=task)
+        lidostas = Lidosta.query.order_by(Lidosta.id).all()
+        return render_template("updatelidmasinas.html", task=task, lidostas = lidostas)
 
 #Lidostas lapa
 @app.route('/admin/lidostas', methods=['POST', 'GET'])
@@ -151,7 +154,7 @@ def update(id):
 @app.route('/admin/reisi', methods=['POST', 'GET'])
 def reis():
   if request.method == 'POST':
-    new_reis = Reis(datums=request.form['datums'],laiks = request.form['laiks'])
+    new_reis = Reis(nolidostas=request.form['nolidostas'], uzlidostas=request.form['uzlidostas'], datums=request.form['datums'],laiks = request.form['laiks'])
     try:
       db.session.add(new_reis)
       db.session.commit()
@@ -159,8 +162,10 @@ def reis():
     except:
       return "Draugi nav labi!"
   else:
+      lidostas = Lidosta.query.order_by(Lidosta.id).all()
       tasks = Reis.query.order_by(Reis.date_created).all()
-      return render_template("adminreisi.html", tasks=tasks)
+      return render_template("adminreisi.html", tasks=tasks, lidostas=lidostas)
+
 @app.route('/delete_reisi/<int:id>')
 def delete_reisi(id):
     task_to_delete = Reis.query.get_or_404(id)
@@ -177,13 +182,16 @@ def update_reisi(id):
     if request.method == 'POST':
         task.datums = request.form['datums']
         task.laiks = request.form['laiks']
+        task.nolidostas = request.form['nolidostas']
+        task.uzlidostas = request.form['uzlidostas']
         try:
             db.session.commit()
             return redirect('/admin/reisi')
         except:
             return "Brāl nesanāca update"
     else:
-        return render_template("updatereisi.html", task=task)
+        lidostas = Lidosta.query.order_by(Lidosta.id).all()
+        return render_template("updatereisi.html", task=task, lidostas=lidostas)
 
 if __name__ == "__main__": 
   app.run(host='0.0.0.0', port=8000)
