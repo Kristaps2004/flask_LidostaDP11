@@ -89,6 +89,20 @@ body {
   margin-bottom: 10px;
 }
 
+.inputdate {
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 170px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 #dzest {
   width: 100px;
   height: 30px;
