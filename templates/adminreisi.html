@@ -22,30 +22,32 @@
       {% if tasks|length < 1 %}
       <h4 id="apaksraksts">Nav pievienots neviens reiss! </h4>
       {% else %}
-      <table class="tabula">
-        <tr class="tabula">
-          <th class="teksts">Izlidošanas datums</th>
-          <th class="teksts">Laiks</th>
-          <th class="teksts">No</th>
-          <th class="teksts">Uz</th>
-          <th class="teksts">Pievienošanas datums</th>
-          <th class="teksts">Darbības</th>
-        </tr>
-        {% for task in tasks %}
+      <div class="tabulaBox">
+        <table class="tabula">
           <tr class="tabula">
-            <td class="dbteksts">{{ task.datums }}</td>
-            <td class="dbteksts">{{ task.laiks }}</td>
-            <td class="dbteksts">{{ task.nolidostas }}</td>
-            <td class="dbteksts">{{ task.uzlidostas }}</td>
-            <td class="dbteksts">{{ task.date_created.date() }}</td>
-            <td>
-              <a href="/delete_reisi/{{task.id}}"><button id=dzest>Delete</button></a>
-              <br>
-              <a href="/update_reisi/{{task.id}}"><button id=labot>Update</button></a>
-            </td>
+            <th class="teksts">Izlidošanas datums</th>
+            <th class="teksts">Laiks</th>
+            <th class="teksts">No</th>
+            <th class="teksts">Uz</th>
+            <th class="teksts">Pievienošanas datums</th>
+            <th class="teksts">Darbības</th>
           </tr>
-        {% endfor %}
-      </table>
+          {% for task in tasks %}
+            <tr class="tabula">
+              <td class="dbteksts">{{ task.datums }}</td>
+              <td class="dbteksts">{{ task.laiks }}</td>
+              <td class="dbteksts">{{ task.nolidostas }}</td>
+              <td class="dbteksts">{{ task.uzlidostas }}</td>
+              <td class="dbteksts">{{ task.date_created.date() }}</td>
+              <td>
+                <a href="/delete_reisi/{{task.id}}"><button id=dzest>Delete</button></a>
+                <br>
+                <a href="/update_reisi/{{task.id}}"><button id=labot>Update</button></a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
       {% endif %}
       <form action="/admin/reisi" method="POST" id="form">
         <input class="inputdate" type="date" min="date" type="text" name="datums" id="datums" placeholder="datums" required>
