@@ -22,28 +22,30 @@
       {% if tasks|length < 1 %}
       <h4 id="apaksraksts">Nav pievienota neviena lidosta! </h4>
       {% else %}
-      <table class="tabula">
-        <tr class="tabula">
-          <th class="teksts">Lidostas nosaukums</th>
-          <th class="teksts">Saīsinājums</th>
-          <th class="teksts">Adrese</th>
-          <th class="teksts">Pievienošanas datums</th>
-          <th class="teksts">Darbības</th>
-        </tr>
-        {% for task in tasks %}
+      <div class="tabulaBox">
+        <table class="tabula">
           <tr class="tabula">
-            <td class="dbteksts">{{ task.content }}</td>
-            <td class="dbteksts">{{ task.saisinajums }}</td>
-            <td class="dbteksts">{{ task.adrese }}</td>
-            <td class="dbteksts">{{ task.date_created.date() }}</td>
-            <td>
-              <a href="/delete/{{task.id}}"><button id=dzest>Delete</button></a>
-              <br>
-              <a href="/update/{{task.id}}"><button id=labot>Update</button></a>
-            </td>
+            <th class="teksts">Lidostas nosaukums</th>
+            <th class="teksts">Saīsinājums</th>
+            <th class="teksts">Adrese</th>
+            <th class="teksts">Pievienošanas datums</th>
+            <th class="teksts">Darbības</th>
           </tr>
-        {% endfor %}
-      </table>
+          {% for task in tasks %}
+            <tr class="tabula">
+              <td class="dbteksts">{{ task.content }}</td>
+              <td class="dbteksts">{{ task.saisinajums }}</td>
+              <td class="dbteksts">{{ task.adrese }}</td>
+              <td class="dbteksts">{{ task.date_created.date() }}</td>
+              <td>
+                <a href="/delete/{{task.id}}"><button id=dzest>Delete</button></a>
+                <br>
+                <a href="/update/{{task.id}}"><button id=labot>Update</button></a>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
       {% endif %}
       <form action="/admin/lidostas" method="POST" id="form">
         <input class="input" type="text" name="content" id="content" maxlength="50" placeholder="Lidostas nosaukums" required>
