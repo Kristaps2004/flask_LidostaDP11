@@ -9,16 +9,16 @@
     <link rel="icon" href="/static/img/clipart-airplane-logo-4.jpg" />
   </head>
   <body>
-    <div class="augsejaisBaneris">
-      <a href="/">
-        <h1 class="virsraksts">OrmondAir</h1>
-      </a>
-    </div>
-    <div class="apaksejaisBaneris">
-      <button class="meklet">
-        <img class="kalendars" src="/static/img/unknown.png" alt="Lidmašīna" />
-        <div class="teksts">Meklēt citā datumā</div>
-      </button>
+	  <div class="augsejaisBaneris">
+		  <a href="/">
+			  <h1 class="virsraksts">OrmondAir</h1>
+		  </a>
+	  </div>
+	  <div>
+      <!--<button class="meklet">
+          <img class="kalendars" src="/static/img/unknown.png" alt="Lidmašīna" />
+          <div class="teksts">Meklēt citā datumā</div>
+        </button>-->
       <div class="fons">
         <div>
           <span id="reisaNumursTeksts" class="reisaNumurs">Reisa numurs:</span>
@@ -48,20 +48,20 @@
       </div>
       <div class="pasazieris">
         <h1 class="miniVirsraksts">Pasažieris</h1>
-        <h2 id="vards">Vārds</h2>
-        <input type="text" class="vards" placeholder="" />
-        <h2 id="uzvards">Uzvārds</h2>
-        <input type="text" class="uzvards" placeholder="" />
-        <h2 id="vecums">Vecums</h2>
-        <input type="text" class="vecums1" placeholder="D" maxlength="2" />
-        <input type="text" class="vecums2" placeholder="M" maxlength="2" />
-        <input type="text" class="vecums3" placeholder="G" maxlength="4" />
-        <h2 id="dzimums">Dzimums</h2>
-        <input type="text" class="dzimums" placeholder="" />
-        <h2 id="tautiba">Tautība</h2>
-        <input type="text" class="tautiba" placeholder="" />
+        <h2 id="vards1">Vārds</h2>
+        <h2 id="uzvards1">Uzvārds</h2>
+        <h2 id="vecums1">Vecums</h2>
+        <h2 id="dzimums1">Dzimums</h2>
+        <h2 id="tautiba1">Tautība</h2>
+        <form action="/rezervacijas"  method="POST" id="form">
+          <input class="vards" type="text" name="vards" id="vards" maxlength="50" required/>
+          <input class="uzvards" type="text" name="uzvards" id="uzvards" maxlength="50" required/>
+          <input class="vecums" type="date" min="date" type="text" name="datums" id="datums" required>
+          <input class="dzimums" type="text" name="dzimums" id="dzimums" maxlength="50" required/>
+          <input class="tautiba"type="text" name="tautiba" id="tautiba" maxlength="50" required/>
+          <button type="submit" id="rezervet">Rezervēt</button>
+        </form>
       </div>
-      <button id="rezervet">Rezervēt</button>
     </div>
     <script src="/static/js/izvele.js"></script>
   </body>

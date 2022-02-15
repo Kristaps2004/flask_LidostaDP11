@@ -44,8 +44,8 @@ class Reis(db.Model):
 
 @app.route('/')
 def index():
-    return render_template("index.html")
-
+  lidostas = Lidosta.query.order_by(Lidosta.id).all()
+  return render_template("index.html", lidostas=lidostas)
 
 @app.route('/admin')
 def admin():
