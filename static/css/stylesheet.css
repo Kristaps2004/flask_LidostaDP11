@@ -171,3 +171,93 @@ body {
   margin-left: 40px;
   margin-bottom: 40px;
 }
+
+#iziet {
+  position: absolute;
+  width: 152px;
+  height: 50.63px;
+  left: 89.1%;
+  top: 35.4%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pamatne {
+  position: absolute;
+  z-index: -1;
+  left: 9.17%;
+  height: 700px;
+  right: 9.17%;
+  top: 22%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+#lidostas{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 10.01%;
+  right: 54.97%;
+  top: 3.36%;
+  bottom: 51.14%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#lidmasinas{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 54.97%;
+  right: 10.01%;
+  top: 3.36%;
+  bottom: 51.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#reisi{
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 10.01%;
+  right: 54.97%;
+  top: 51.54%;
+  bottom: 2.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#skatitStatistiku {
+  position: absolute;
+  width: 549px;
+  height: 300px;
+  left: 54.97%;
+  right: 10.01%;
+  top: 51.54%;
+  bottom: 2.95%;
+  background: #c4c4c4;
+  border-radius: 10px;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}

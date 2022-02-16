@@ -4,13 +4,13 @@
       {
         "id": "beeef9da-1975-4d90-9e1d-6e1a618581b9",
         "line": 1,
-        "version": 4004,
+        "version": 4044,
         "index": 0
       },
       {
         "id": "d2fc011b-74df-46a2-9032-6ea2824c198a",
         "line": 1,
-        "version": 4004,
+        "version": 4044,
         "index": 0
       }
     ],
@@ -20,6 +20,14 @@
         "line": 56,
         "version": 516,
         "index": 914
+      }
+    ],
+    "test.db": [
+      {
+        "id": "3ac1a15f-afa7-4462-9dbf-fc4e92a5062c",
+        "line": 3,
+        "version": 3,
+        "index": 3182
       }
     ]
   }

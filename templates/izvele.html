@@ -53,13 +53,13 @@
         <h2 id="vecums1">Dzimšanas dati</h2>
         <h2 id="dzimums1">Dzimums</h2>
         <h2 id="tautiba1">Tautība</h2>
-        <form action="/rezervacijas"  method="POST" id="form">
-          <input class="vards" type="text" name="vards" id="vards" maxlength="50" required/>
-          <input class="uzvards" type="text" name="uzvards" id="uzvards" maxlength="50" required/>
-          <input class="vecums" type="date" min="date" type="text" name="datums" id="datums" required>
-          <input class="dzimums" type="text" name="dzimums" id="dzimums" maxlength="50" required/>
-          <input class="tautiba"type="text" name="tautiba" id="tautiba" maxlength="50" required/>
-          <button type="submit" id="rezervet">Rezervēt</button>
+        <form action="/izvele" method="POST" id="form">
+          <input class="input" type="text" name="vards" id="vards" maxlength="50" required/>
+          <input class="input" type="text" name="uzvards" id="uzvards" maxlength="50" required/>
+          <input class="input" type="date" min="date" type="text" name="vecums" id="vecums" required>
+          <input class="input" type="text" name="dzimums" id="dzimums" maxlength="50" required/>
+          <input class="input" type="text" name="tautiba" id="tautiba" maxlength="50" required/>
+          <input type="submit" value="Rezervēt" id="pievienot">
         </form>
       </div>
     </div>

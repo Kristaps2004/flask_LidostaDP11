@@ -1,7 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from sqlalchemy import desc
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
@@ -50,7 +49,7 @@ class Lietotajs(db.Model):
     tautiba = db.Column(db.String(200), nullable=False)
   
     def __repr__(self):
-          return 'Lietotajs %r' % self.id
+        return 'Lietotajs %r' % self.id
 
 
 @app.route('/')
@@ -62,11 +61,20 @@ def index():
 def admin():
     return render_template("admin.html")
 
-
-@app.route('/izvele')
-def izvele():
-    return render_template("izvele.html")
-
+#Izvele
+@app.route('/izvele', methods=['POST', 'GET'])
+def lietotajs():
+  if request.method == 'POST':
+    new_lietotajs = Lietotajs(vards=request.form['vards'],uzvards=request.form['uzvards'], vecums=request.form['vecums'], dzimums=request.form['dzimums'], tautiba=request.form['tautiba'])
+    try:
+      db.session.add(new_lietotajs)
+      db.session.commit()
+      return redirect('/rezervacijas')
+    except:
+      return "Draugi nav labi!"
+  else:
+    tasks = Lietotajs.query.order_by(Lietotajs.id).all()
+    return render_template('izvele.html', tasks=tasks)
 
 @app.route('/rezervacijas')
 def rezervacijas():
