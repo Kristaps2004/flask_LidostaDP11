@@ -10,9 +10,7 @@
   </head>
   <body>
     <div class="augsejaisBaneris">
-      <a href="/">
-        <h1 class="homePage">OrmondAir</h1>
-      </a>
+      <a href="/"><h1 class="homePage">OrmondAir</h1></a>
     </div>
     <div class="apaksejaisBaneris">
       <h1 id="virsraksts">Veikt Labojumus</h1>
@@ -22,7 +20,6 @@
             <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
           {% endfor %}
         </select>
-        <!--<input class="input" type="text" placeholder="lIDOSTA" name="content" id="content" value="{{task.content}}" maxlength="50" required>-->
         <input class="input" maxlength="50" type="text" name="modelis" id="modelis" value="{{task.modelis}}" required>
         <input class="input" maxlength="4" type="text" name="razosanas_gads" id="razosanas_gads" value="{{task.razosanas_gads}}" required>
         <input class="input" maxlength="4" type="text" name="vietu_skaits" id="vietu_skaits" value="{{task.vietu_skaits}}" required>

@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Post No Bills Colombo Medium";
   src: url("../fonts/post-no-bills-colombo.medium.ttf");
@@ -5,8 +12,8 @@
 
 .augsejaisBaneris {
   position: absolute;
-  left: -0.07%;
-  right: 0.07%;
+  left: 0%;
+  right: 0%;
   top: 0%;
   bottom: 84.28%;
   background: #073590;
@@ -15,20 +22,12 @@
 .virsraksts {
   position: absolute;
   left: 0%;
-  right: 71.74%;
-  top: 0%;
-  bottom: 0%;
-  width: 542.67px;
-  user-select: none;
   font-family: Post No Bills Colombo Medium;
-  font-style: normal;
-  font-weight: 500;
   font-size: 96px;
   display: flex;
   margin-left: 20px;
-  align-items: center;
-  text-align: center;
   color: #ffffff;
+  user-select: none;
 }
 
 #atpakal {
@@ -43,7 +42,7 @@
   border-style: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  cursor: pointer;
+  cursor: pointer
 }
 
 .apaksejaisBaneris {

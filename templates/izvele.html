@@ -10,41 +10,21 @@
   </head>
   <body>
 	  <div class="augsejaisBaneris">
-		  <a href="/">
-			  <h1 class="virsraksts">OrmondAir</h1>
-		  </a>
+		  <a href="/"><h1 class="virsraksts">OrmondAir</h1></a>
 	  </div>
 	  <div>
-      <!--<button class="meklet">
-          <img class="kalendars" src="/static/img/unknown.png" alt="Lidmašīna" />
-          <div class="teksts">Meklēt citā datumā</div>
-        </button>-->
       <div class="fons">
-        <div>
           <span id="reisaNumursTeksts" class="reisaNumurs">Reisa numurs:</span>
           <span id="reisaNumurs" class="reisaNumurs">FR1976</span>
-        </div>
-        <div>
           <span id="atiesanasDatums" class="infoBilete">09.</span>
           <span id="atiesanasMenesis" class="infoBilete">Jūn.</span>
-        </div>
-        <div>
-          <img class="lidmasina" src="/static/img/lidmasina.png" alt="Lidmašīna" />
-        </div>
-        <div>
+          <img class="lidmasina" src="/static/img/lidmasina.png" alt="Lidmašīna"/>
           <span id="ilgums">Ilgums 3h 40min</span>
-        </div>
-        <div>
           <span id="atiesanasLaiks" class="infoBilete">19.55</span>
           <span id="atiesanasPilseta" class="infoBilete">Oslo</span>
-        </div>
-        <div>
           <span id="ielidosanasLaiks" class="infoBilete">19.55</span>
           <span id="ielidosanasPilseta" class="infoBilete">Alikante</span>
-        </div>
-        <div>
           <span id="biletesCena" class="infoBilete">120.99€</span>
-        </div>
       </div>
       <div class="pasazieris">
         <h1 class="miniVirsraksts">Pasažieris</h1>
@@ -56,10 +36,13 @@
         <form action="/izvele" method="POST" id="form">
           <input class="input" type="text" name="vards" id="vards" maxlength="50" required/>
           <input class="input" type="text" name="uzvards" id="uzvards" maxlength="50" required/>
-          <input class="input" type="date" min="date" type="text" name="vecums" id="vecums" required>
-          <input class="input" type="text" name="dzimums" id="dzimums" maxlength="50" required/>
+          <input class="input" type="date" min="date" name="vecums" id="vecums" required>
+          <select class="input" name="dzimums" id="dzimums" required>
+            <option>Sieviete</option>
+            <option>Vīrietis</option>
+          </select>
           <input class="input" type="text" name="tautiba" id="tautiba" maxlength="50" required/>
-          <input type="submit" value="Rezervēt" id="pievienot">
+          <input type="submit" value="Rezervēt" id="rezervet">
         </form>
       </div>
     </div>
