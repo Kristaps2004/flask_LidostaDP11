@@ -19,7 +19,7 @@
   background: #073590;
 }
 
-.virsraksts {
+.homePage {
   position: absolute;
   left: 0%;
   font-family: Post No Bills Colombo Medium;
@@ -30,7 +30,7 @@
   user-select: none;
 }
 
-#atpakal {
+#atgriezties_admin {
   position: absolute;
   width: 152px;
   height: 50.63px;
@@ -42,7 +42,7 @@
   border-style: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .apaksejaisBaneris {
@@ -52,27 +52,6 @@
   top: 15.72%;
   bottom: 0%;
   background: rgba(186, 182, 182, 0.53);
-}
-
-.kalendars {
-  position: absolute;
-  height: 52.73px;
-  left: 16.09%;
-  right: 81.25%;
-  top: 9.36%;
-  bottom: 84.82%;
-  background: #ffffff;
-  border-radius: 10px;
-}
-
-.kalendarsBilde {
-  position: absolute;
-  width: 30.43px;
-  height: 31.63px;
-  left: 20.99%;
-  right: 19.34%;
-  top: 20%;
-  bottom: 19.34%;
 }
 
 .reisaNumursKaste {

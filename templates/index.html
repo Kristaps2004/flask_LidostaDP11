@@ -15,20 +15,19 @@
       <button id="ienakt">Ienākt</button>
       <a href="/admin"><button id="admin">Admin</button></a> 
       <a href="/rezervacijas"><button id="rezervacijas">Manas Rezervācijas</button></a>
-      <form action="/izvele" id="form">
-        <select class="mekletNo" name="nolidostas" id="nolidostas" method="POST">
+      <form action="/" method="POST" id="form">
+        <select class="input" name="nolidostas" id="nolidostas" method="POST">
           {% for lidosta in lidostas %}
             <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
           {% endfor %}
         </select>
-        <select class="mekletUz" name="uzlidostas" id="uzlidostas" method="POST">
+        <select class="input" name="uzlidostas" id="uzlidostas" method="POST">
           {% for lidosta in lidostas %}
             <option value="{{lidosta.content}}">{{ lidosta.content }}</option>
           {% endfor %}
         </select>
-        <input type="date" id="datumsTurp" name="trip-start" min="date" max="2029-12-31" required/>
-        <input type="date" id="datumsAtpakal" name="trip-start" min="date" max="2029-12-31" required/>
-        <input type="submit" value="Pievienot" id="meklet">
+        <input class="inputdate" type="date" min="date" type="text" name="datumsno" id="datumsno" placeholder="datumsno" required>
+        <input type="submit" value="Pievienot" id="pievienot">
       </form>
     </div>
     <div class="apaksejaisBaneris">
@@ -77,8 +76,8 @@
           <button type="submit" class="submit-btn">Login</button>
         </form>
         <form id="register" class="input-group">
-          <input type="email" class="input-field" placeholder="E-pasts" required/>
-          <input type="password" class="input-field" placeholder="Parole" required/>
+          <input type="email" class="input-field" placeholder="E-pasts" id="userInputUN" required/>
+          <input type="password" class="input-field" placeholder="Parole" id="userInputPass" required/>
           <input type="checkbox" class="check-box" required/>
           <div class="piekritNoteikumiem">Reģistrējoties Jūs piekrītat OrmondAir konfidencialitātes politikai un lietošanas noteikumiem</div>
           <button type="submit" class="submit-btn">Register</button>

@@ -100,7 +100,7 @@
   background: rgba(186, 182, 182, 0.53);
 }
 
-.mekletNo {
+#nolidostas {
   position: absolute;
   left: 18.96%;
   right: 55.56%;
@@ -115,7 +115,7 @@
   padding-right: 20px;
 }
 
-.mekletUz {
+#uzlidostas {
   position: absolute;
   left: 45%;
   right: 29.9%;
@@ -130,7 +130,7 @@
   padding-right: 20px;
 }
 
-#meklet {
+#pievienot {
   position: absolute;
   left: 71%;
   right: 18.99%;
@@ -145,23 +145,9 @@
   border: 1px solid transparent;
 }
 
-#datumsTurp {
+#datumsno {
   position: absolute;
   left: 18.96%;
-  right: 55.57%;
-  top: 62%;
-  bottom: 30.74%;
-  border-radius: 10px;
-  width: 240px;
-  height: 51px;
-  padding-left: 20px;
-  outline: none;
-  border: 1px solid transparent;
-}
-
-#datumsAtpakal {
-  position: absolute;
-  left: 32%;
   right: 55.57%;
   top: 62%;
   bottom: 30.74%;

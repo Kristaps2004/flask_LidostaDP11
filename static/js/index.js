@@ -7,6 +7,15 @@ let x = document.getElementById("login");
 let y = document.getElementById("register");
 let z = document.getElementById("btn");
 
+const username = "admin";
+const password = "ormondair";
+
+let ievadeUsername = document.getElementById("userInputUN");
+let ievadeUsername = document.getElementById("userInputPass");
+
+
+
+
 function register() {
   x.style.left = "-400px";
   y.style.left = "50px";

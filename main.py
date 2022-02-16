@@ -17,7 +17,6 @@ class Lidosta(db.Model):
     def __repr__(self):
         return 'Task %r' % self.id
 
-
 class Lidmasina(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -51,11 +50,29 @@ class Lietotajs(db.Model):
     def __repr__(self):
         return 'Lietotajs %r' % self.id
 
+class Rezervacija(db.Model):
+  id = db.Column(db.Integer, primary_key=True)
+  nolidostas = db.Column(db.String(200), nullable=False)
+  uzlidostas = db.Column(db.String(200), nullable=False)
+  datumsno = db.Column(db.String(200), nullable=False)
 
-@app.route('/')
-def index():
-  lidostas = Lidosta.query.order_by(Lidosta.id).all()
-  return render_template("index.html", lidostas=lidostas)
+  def __repr__(self):
+        return 'Rezervacija %r' % self.id
+
+@app.route('/', methods=["POST", "GET"])
+def rezervacija():
+  if request.method == 'POST':
+    new_rezervacija = Rezervacija(nolidostas=request.form['nolidostas'],uzlidostas=request.form['uzlidostas'], datumsno=request.form['datumsno'])
+    try:
+      db.session.add(new_rezervacija)
+      db.session.commit()
+      return redirect('/izvele')
+    except:
+      return "Draugi nav labi!"
+  else:
+    lidostas = Lidosta.query.order_by(Lidosta.id).all()
+    tasks = Rezervacija.query.order_by(Rezervacija.id).all()
+    return render_template('index.html', tasks=tasks, lidostas=lidostas)
 
 @app.route('/admin')
 def admin():
@@ -79,7 +96,6 @@ def lietotajs():
 @app.route('/rezervacijas')
 def rezervacijas():
     return render_template("rezervacijas.html")
-
 
 @app.route('/statistika')
 def statistika():
@@ -142,7 +158,6 @@ def lidostas():
   else:
     tasks = Lidosta.query.order_by(Lidosta.date_created).all()
     return render_template('adminlidostas.html', tasks=tasks)
-
 
 @app.route('/delete/<int:id>')
 def delete(id):
