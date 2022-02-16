@@ -41,6 +41,17 @@ class Reis(db.Model):
     def __repr__(self):
         return 'Reis %r' % self.id
 
+class Lietotajs(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    vards = db.Column(db.String(200), nullable=False)
+    uzvards = db.Column(db.String(200), nullable=False)
+    vecums = db.Column(db.String(200), nullable=False)
+    dzimums = db.Column(db.String(200), nullable=False)
+    tautiba = db.Column(db.String(200), nullable=False)
+  
+    def __repr__(self):
+          return 'Lietotajs %r' % self.id
+
 
 @app.route('/')
 def index():
