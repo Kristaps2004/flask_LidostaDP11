@@ -46,7 +46,7 @@
       </div>
       {% endif %}
       <form action="/admin/reisi" method="POST" id="form">
-        <input class="inputdate" type="date" min="date" name="datums" id="datums" placeholder="datums" required>
+        <input class="inputdate" type="date" min="2022-02-17" name="datums" id="datums" placeholder="datums" required>
         <input class="inputdate" type="time" type="text" name="laiks" id="laiks" placeholder="laiks" required>
         <select class="input" name="nolidostas" id="nolidostas" method="POST">
           {% for lidosta in lidostas %}
