@@ -90,8 +90,9 @@ def lietotajs():
     except:
       return "Draugi nav labi!"
   else:
+    rezervacija = Rezervacija.query.order_by(Rezervacija.id).all()
     tasks = Lietotajs.query.order_by(Lietotajs.id).all()
-    return render_template('izvele.html', tasks=tasks)
+    return render_template('izvele.html', tasks=tasks, rezervacija=rezervacija)
 
 @app.route('/rezervacijas')
 def rezervacijas():

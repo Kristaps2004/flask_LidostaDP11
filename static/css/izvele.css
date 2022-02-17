@@ -327,14 +327,6 @@ body {
   right: 83.49%;
 }
 
-#atiesanasDatums {
-  position: absolute;
-  left: 6.03%;
-  right: 92.09%;
-  top: 29.32%;
-  bottom: 58.68%;
-}
-
 #atiesanasMenesis {
   position: absolute;
   left: 5.38%;
@@ -355,8 +347,6 @@ body {
   position: absolute;
   left: 24.96%;
   right: 70.76%;
-  top: 48.52%;
-  bottom: 35.28%;
 }
 
 #ielidosanasLaiks {
@@ -365,14 +355,6 @@ body {
   right: 30.45%;
   top: 30.52%;
   bottom: 55.08%;
-}
-
-#ielidosanasPilseta {
-  position: absolute;
-  left: 64.11%;
-  right: 28.95%;
-  top: 47.92%;
-  bottom: 38.28%;
 }
 
 #biletesCena {
@@ -419,4 +401,38 @@ body {
   letter-spacing: -0.01px;
   text-transform: uppercase;
   color: #000000;
+}
+
+#dati {
+  position: absolute;
+  left: 20%;
+  top: 56%;
+  width: 373.33px;
+  height: 42.19px;
+  background: #ffffff;
+}
+
+#ielidosanasPilseta {
+  position: absolute;
+  left: 64.11%;
+  top: 56%;
+  width: 373.33px;
+  height: 42.19px;
+  background: #ffffff;
+}
+
+#atiesanasDatums {
+  position: absolute;
+  left: 6.03%;
+  bottom: 35.28%;
+  width: 124px;
+  height: 42.19px;
+  background: #ffffff;
+}
+
+.cenas{
+  position: absolute;
+  font-size: 5px;
+  left: 95%;
+  top: 96%;
 }

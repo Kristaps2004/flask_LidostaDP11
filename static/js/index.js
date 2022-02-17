@@ -7,14 +7,22 @@ let x = document.getElementById("login");
 let y = document.getElementById("register");
 let z = document.getElementById("btn");
 
+
+//login
+/*
 const username = "admin";
 const password = "ormondair";
+let loggedIn;
 
-let ievadeUsername = document.getElementById("userInputUN");
-let ievadeUsername = document.getElementById("userInputPass");
+let inputUsername = document.getElementById("userInputUN");
+let inputPassword = document.getElementById("userInputPass");
 
-
-
+if (inputUsername === username && inputPassword === password){
+  loggedIn = "true";
+} else {
+  loggedIn = "false";
+}
+*/
 
 function register() {
   x.style.left = "-400px";

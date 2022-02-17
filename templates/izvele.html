@@ -16,15 +16,23 @@
       <div class="fons">
           <span id="reisaNumursTeksts" class="reisaNumurs">Reisa numurs:</span>
           <span id="reisaNumurs" class="reisaNumurs">FR1976</span>
-          <span id="atiesanasDatums" class="infoBilete">09.</span>
-          <span id="atiesanasMenesis" class="infoBilete">Jūn.</span>
-          <img class="lidmasina" src="/static/img/lidmasina.png" alt="Lidmašīna"/>
-          <span id="ilgums">Ilgums 3h 40min</span>
+          {% for rezervacija in rezervacija %}
+          <h id="dati" class="infoBilete">
+            <option value="{{rezervacija.nolidostas}}">{{ rezervacija.nolidostas }}</option>
+          </h>
+          <h id="ielidosanasPilseta" class="infoBilete">
+            <option value="{{rezervacija.uzlidostas}}">{{ rezervacija.uzlidostas }}</option>
+          </h>
+           <h id="atiesanasDatums" class="infoBilete">
+            <option value="{{rezervacija.datumsno}}">{{ rezervacija.datumsno }}</option>
+          </h>
+          {% endfor %}
+          <img class="lidmasina" src="/static/img/lidmasina.png"/>
+          <span id="ilgums">Ilgums 1h 50min</span>
           <span id="atiesanasLaiks" class="infoBilete">19.55</span>
-          <span id="atiesanasPilseta" class="infoBilete">Oslo</span>
-          <span id="ielidosanasLaiks" class="infoBilete">19.55</span>
-          <span id="ielidosanasPilseta" class="infoBilete">Alikante</span>
-          <span id="biletesCena" class="infoBilete">120.99€</span>
+          <span id="ielidosanasLaiks" class="infoBilete">22.00</span>
+          <span id="biletesCena" class="infoBilete"></span>
+          <h1 class="cenas">*Cenas mainās katru sekundi!</h1>
       </div>
       <div class="pasazieris">
         <h1 class="miniVirsraksts">Pasažieris</h1>
